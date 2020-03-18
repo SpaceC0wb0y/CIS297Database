@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="RegistrationDatabaseProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="RegistrationDatabaseProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Course">
           <Key>
             <PropertyRef Name="Id" />
@@ -69,6 +69,7 @@
           <Property Name="Friday" Type="bit" Nullable="false" />
           <Property Name="Time" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Semester" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Grade_Id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -126,6 +127,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Section_ToGrade">
+          <End Role="Grade" Type="Self.Grade" Multiplicity="1" />
+          <End Role="Section" Type="Self.Section" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Section">
+              <PropertyRef Name="Grade_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Student_ToMajor">
           <End Role="Major" Type="Self.Major" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
@@ -162,13 +175,16 @@
             <End Role="Faculty" EntitySet="Faculty" />
             <End Role="Section" EntitySet="Section" />
           </AssociationSet>
+          <AssociationSet Name="FK_Section_ToGrade" Association="Self.FK_Section_ToGrade">
+            <End Role="Grade" EntitySet="Grade" />
+            <End Role="Section" EntitySet="Section" />
+          </AssociationSet>
           <AssociationSet Name="FK_Student_ToMajor" Association="Self.FK_Student_ToMajor">
             <End Role="Major" EntitySet="Major" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="RegistrationDatabaseProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -217,6 +233,7 @@
           <Property Name="C_Grade" Type="Int32" Nullable="false" />
           <Property Name="C__Grade1" Type="Int32" Nullable="false" />
           <Property Name="F_Grade" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Sections" Relationship="RegistrationDatabaseProjectModel.FK_Section_ToGrade" FromRole="Grade" ToRole="Section" />
         </EntityType>
         <EntityType Name="Major">
           <Key>
@@ -244,6 +261,8 @@
           <NavigationProperty Name="Course" Relationship="Self.FK_Section_ToCourse" FromRole="Section" ToRole="Course" />
           <NavigationProperty Name="Enrollments" Relationship="Self.FK_Enrollment_ToSection" FromRole="Section" ToRole="Enrollment" />
           <NavigationProperty Name="Faculty" Relationship="Self.FK_Section_ToFaculty" FromRole="Section" ToRole="Faculty" />
+          <Property Name="Grade_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Grade" Relationship="RegistrationDatabaseProjectModel.FK_Section_ToGrade" FromRole="Section" ToRole="Grade" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -343,7 +362,23 @@
             <End Role="Major" EntitySet="Majors" />
             <End Role="Student" EntitySet="Students" />
           </AssociationSet>
+          <AssociationSet Name="FK_Section_ToGrade" Association="RegistrationDatabaseProjectModel.FK_Section_ToGrade">
+            <End Role="Grade" EntitySet="Grades" />
+            <End Role="Section" EntitySet="Sections" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Section_ToGrade">
+          <End Type="RegistrationDatabaseProjectModel.Grade" Role="Grade" Multiplicity="1" />
+          <End Type="RegistrationDatabaseProjectModel.Section" Role="Section" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grade">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Section">
+              <PropertyRef Name="Grade_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -407,6 +442,7 @@
           <EntitySetMapping Name="Sections">
             <EntityTypeMapping TypeName="RegistrationDatabaseProjectModel.Section">
               <MappingFragment StoreEntitySet="Section">
+                <ScalarProperty Name="Grade_Id" ColumnName="Grade_Id" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Course_Id" ColumnName="Course_Id" />

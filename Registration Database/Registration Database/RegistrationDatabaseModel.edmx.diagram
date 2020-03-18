@@ -17,6 +17,7 @@
         <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Enrollment_ToStudent" ManuallyRouted="false" />
         <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Section_ToFaculty" ManuallyRouted="false" />
         <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Student_ToMajor" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Section_ToGrade" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

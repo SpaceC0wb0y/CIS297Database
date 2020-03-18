@@ -31,10 +31,12 @@ namespace Registration_Database
         public bool Friday { get; set; }
         public string Time { get; set; }
         public string Semester { get; set; }
+        public int Grade_Id { get; set; }
     
         public virtual Course Course { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Enrollment> Enrollments { get; set; }
         public virtual Faculty Faculty { get; set; }
+        public virtual Grade Grade { get; set; }
     }
 }
