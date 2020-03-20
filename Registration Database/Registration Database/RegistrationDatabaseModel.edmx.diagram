@@ -16,7 +16,6 @@
         <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Enrollment_ToSection" ManuallyRouted="false" />
         <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Enrollment_ToStudent" ManuallyRouted="false" />
         <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Section_ToFaculty" ManuallyRouted="false" />
-        <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Section_ToGrade" />
         <EntityTypeShape EntityType="RegistrationDatabaseProjectModel.Student_Major" Width="1.5" PointX="5.25" PointY="10" />
         <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Grade_ToSection" />
         <AssociationConnector Association="RegistrationDatabaseProjectModel.FK_Student_Major_ToMajor" />
