@@ -12,18 +12,13 @@ namespace Registration_Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Major
+    public partial class Student_Major
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Major()
-        {
-            this.Student_Major = new HashSet<Student_Major>();
-        }
-    
         public int Id { get; set; }
-        public string Name { get; set; }
+        public int Student_Id { get; set; }
+        public int Major_Id { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Student_Major> Student_Major { get; set; }
+        public virtual Major Major { get; set; }
+        public virtual Student Student { get; set; }
     }
 }

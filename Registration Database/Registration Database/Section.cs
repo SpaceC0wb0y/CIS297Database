@@ -18,6 +18,7 @@ namespace Registration_Database
         public Section()
         {
             this.Enrollments = new HashSet<Enrollment>();
+            this.Grades = new HashSet<Grade>();
         }
     
         public int Id { get; set; }
@@ -38,5 +39,7 @@ namespace Registration_Database
         public virtual ICollection<Enrollment> Enrollments { get; set; }
         public virtual Faculty Faculty { get; set; }
         public virtual Grade Grade { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Grade> Grades { get; set; }
     }
 }

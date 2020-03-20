@@ -30,8 +30,10 @@ namespace Registration_Database
         public int C_Grade { get; set; }
         public int C__Grade1 { get; set; }
         public int F_Grade { get; set; }
+        public int Section_Id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Section> Sections { get; set; }
+        public virtual Section Section { get; set; }
     }
 }

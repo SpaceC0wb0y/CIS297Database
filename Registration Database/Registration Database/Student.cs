@@ -18,14 +18,15 @@ namespace Registration_Database
         public Student()
         {
             this.Enrollments = new HashSet<Enrollment>();
+            this.Student_Major = new HashSet<Student_Major>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Major_Id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Enrollment> Enrollments { get; set; }
-        public virtual Major Major { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Student_Major> Student_Major { get; set; }
     }
 }
