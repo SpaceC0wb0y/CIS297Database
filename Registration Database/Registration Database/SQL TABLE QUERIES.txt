@@ -49,9 +49,7 @@ CREATE TABLE [dbo].[Section] (
     [Friday]     BIT           DEFAULT ((0)) NOT NULL,
     [Time]       NVARCHAR (50) NOT NULL,
     [Semester]   NVARCHAR (50) NOT NULL,
-    [Grade_Id]   INT           NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_Section_ToGrade] FOREIGN KEY ([Grade_Id]) REFERENCES [dbo].[Grade] ([Id]),
     CONSTRAINT [FK_Section_ToCourse] FOREIGN KEY ([Course_Id]) REFERENCES [dbo].[Course] ([Id]) ON DELETE CASCADE,
     CONSTRAINT [FK_Section_ToFaculty] FOREIGN KEY ([Faculty_Id]) REFERENCES [dbo].[Faculty] ([Id])
 );
