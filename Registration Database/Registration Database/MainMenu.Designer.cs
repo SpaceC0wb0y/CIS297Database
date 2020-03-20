@@ -170,6 +170,7 @@
             this.Controls.Add(this.DepartmentTextBox);
             this.Controls.Add(this.AddCourseButton);
             this.Name = "MainMenu";
+            this.Enter += new System.EventHandler(this.MainMenu_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

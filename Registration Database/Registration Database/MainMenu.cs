@@ -21,20 +21,14 @@ namespace Registration_Database {
 
             RegistrationDatabase = new RegistrationDatabaseProjectEntities();
 
-            UpdateCourseList();
+            BindCourseList();
+        }
+
+        private void BindCourseList() {
 
             CourseListBox.DataSource = RegistrationDatabase.Courses.ToList();
             CourseListBox.DisplayMember = "Name";
             CourseListBox.ValueMember = "Id";
-        }
-
-        private void UpdateCourseList() {
-
-            CoursesLabel.Text = $"Courses: {Environment.NewLine}";
-            foreach (var course in RegistrationDatabase.Courses) {
-
-                CoursesLabel.Text += $"{course.Department} {course.Number} {Environment.NewLine}";
-            }
         }
 
         private void AddCourseButton_Click(object sender, EventArgs e) {
@@ -70,14 +64,22 @@ namespace Registration_Database {
 
                 MessageBox.Show(ex.ToString());
             }
-            UpdateCourseList();
-            CourseListBox.Update();
+
+            BindCourseList();
         }
 
         private void CourseListBox_SelectedIndexChanged(object sender, EventArgs e) {
 
             Course selectedcourse = CourseListBox.SelectedItem as Course;
-            SelectedCourselabel.Text = $"{selectedcourse.Department} {selectedcourse.Number} {selectedcourse.Name} {selectedcourse.Credits}";
+            SelectedCourselabel.Text = $"Department: {selectedcourse.Department} \n" +
+                $"Number: {selectedcourse.Number}\n" +
+                $"Name: {selectedcourse.Name}\n" +
+                $"Credits: {selectedcourse.Credits}";
+        }
+
+        private void MainMenu_Enter(object sender, EventArgs e) {
+
+            BindCourseList();
         }
     }
 }
