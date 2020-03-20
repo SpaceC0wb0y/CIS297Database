@@ -73,14 +73,14 @@
     <Compile Include="FacultyMenu.Designer.cs">
       <DependentUpon>FacultyMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grade.cs">
+      <DependentUpon>RegistrationDatabaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Grade.cs">
-      <DependentUpon>RegistrationDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Major.cs">
       <DependentUpon>RegistrationDatabaseModel.tt</DependentUpon>
