@@ -24,6 +24,11 @@ namespace Registration_Database {
             BindCourseList();
         }
 
+        private void MainMenu_Enter(object sender, EventArgs e) {
+
+            BindCourseList();
+        }
+
         private void BindCourseList() {
 
             CourseListBox.DataSource = RegistrationDatabase.Courses.ToList();
@@ -33,53 +38,107 @@ namespace Registration_Database {
 
         private void AddCourseButton_Click(object sender, EventArgs e) {
 
-            AddingACourse();
+            AddingCourse();
         }
 
-        private void AddingACourse() {
+        private void UpdateCourseButton_Click(object sender, EventArgs e) {
 
-            Course newCourse = new Course {
+            UpdatingCourse();
+        }
 
-                Department = DepartmentTextBox.Text,
-                Number = NumberTextBox.Text,
-                Name = NameTextBox.Text
-            };
+        private void DeleteCourseButton_Click(object sender, EventArgs e) {
 
-            try {
+            DeleteCourse();
+        }
 
-                newCourse.Credits = Convert.ToInt32(CreditsTextBox.Text);
+        private void ClearFeildsButton_Click(object sender, EventArgs e) {
+
+            IdTextBox.Text = DepartmentTextBox.Text = NumberTextBox.Text = NameTextBox.Text = CreditsTextBox.Text = "";
+        }
+
+        private void DeleteCourse() {
+
+            if (!String.IsNullOrEmpty(IdTextBox.Text)) {
+
+                Course selectedcourse = CourseListBox.SelectedItem as Course;
+
+                RegistrationDatabase.Courses.Remove(selectedcourse);
+
+                try {
+
+                    RegistrationDatabase.SaveChanges();
+                }
+                catch (DbUpdateException ex) {
+
+                    MessageBox.Show(ex.ToString());
+                }
+
+                BindCourseList();
             }
-            catch (Exception) {
+        }
 
-                MessageBox.Show("Course Credits Input is INVALID\nMust be number!!");
+        private void UpdatingCourse() {
+
+            if (!String.IsNullOrEmpty(IdTextBox.Text)) {
+
+                Course selectedcourse = CourseListBox.SelectedItem as Course;
+
+                selectedcourse.Department = DepartmentTextBox.Text;
+                selectedcourse.Number = NumberTextBox.Text;
+                selectedcourse.Name = NameTextBox.Text;
+                selectedcourse.Credits = Convert.ToInt32(CreditsTextBox.Text);
+
+                BindCourseList();
             }
+        }
 
-            RegistrationDatabase.Courses.Add(newCourse);
+        private void AddingCourse() {
 
-            try {
+            if (!String.IsNullOrEmpty(DepartmentTextBox.Text) &&
+                !String.IsNullOrEmpty(NumberTextBox.Text) &&
+                !String.IsNullOrEmpty(NameTextBox.Text) &&
+                !String.IsNullOrEmpty(CreditsTextBox.Text)) {
 
-                RegistrationDatabase.SaveChanges();
+                Course newCourse = new Course {
+
+                    Department = DepartmentTextBox.Text,
+                    Number = NumberTextBox.Text,
+                    Name = NameTextBox.Text
+                };
+
+                try {
+
+                    newCourse.Credits = Convert.ToInt32(CreditsTextBox.Text);
+                }
+                catch (Exception) {
+
+                    MessageBox.Show("Course Credits Input is INVALID\nMust be number!!");
+                }
+
+                RegistrationDatabase.Courses.Add(newCourse);
+
+                try {
+
+                    RegistrationDatabase.SaveChanges();
+                }
+                catch (DbUpdateException ex) {
+
+                    MessageBox.Show(ex.ToString());
+                }
+
+                BindCourseList();
             }
-            catch (DbUpdateException ex) {
-
-                MessageBox.Show(ex.ToString());
-            }
-
-            BindCourseList();
         }
 
         private void CourseListBox_SelectedIndexChanged(object sender, EventArgs e) {
 
             Course selectedcourse = CourseListBox.SelectedItem as Course;
-            SelectedCourselabel.Text = $"Department: {selectedcourse.Department} \n" +
-                $"Number: {selectedcourse.Number}\n" +
-                $"Name: {selectedcourse.Name}\n" +
-                $"Credits: {selectedcourse.Credits}";
-        }
 
-        private void MainMenu_Enter(object sender, EventArgs e) {
-
-            BindCourseList();
+            IdTextBox.Text = selectedcourse.Id.ToString();
+            DepartmentTextBox.Text = selectedcourse.Department;
+            NumberTextBox.Text = selectedcourse.Number;
+            NameTextBox.Text = selectedcourse.Name;
+            CreditsTextBox.Text = selectedcourse.Credits.ToString();
         }
     }
 }
