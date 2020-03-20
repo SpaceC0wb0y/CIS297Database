@@ -22,17 +22,19 @@ CREATE TABLE [dbo].[Faculty] (
 );
 
 CREATE TABLE [dbo].[Grade] (
-    [Id]       INT IDENTITY (1, 1) NOT NULL,
-    [A_Grade]  INT DEFAULT ((0)) NOT NULL,
-    [A-_Grade] INT DEFAULT ((0)) NOT NULL,
-    [B+_Grade] INT DEFAULT ((0)) NOT NULL,
-    [B_Grade]  INT DEFAULT ((0)) NOT NULL,
-    [B-_Grade] INT DEFAULT ((0)) NOT NULL,
-    [C+_Grade] INT DEFAULT ((0)) NOT NULL,
-    [C_Grade]  INT DEFAULT ((0)) NOT NULL,
-    [C-_Grade] INT DEFAULT ((0)) NOT NULL,
-    [F_Grade]  INT DEFAULT ((0)) NOT NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
+    [Id]         INT IDENTITY (1, 1) NOT NULL,
+    [A_Grade]    INT DEFAULT ((0)) NOT NULL,
+    [A-_Grade]   INT DEFAULT ((0)) NOT NULL,
+    [B+_Grade]   INT DEFAULT ((0)) NOT NULL,
+    [B_Grade]    INT DEFAULT ((0)) NOT NULL,
+    [B-_Grade]   INT DEFAULT ((0)) NOT NULL,
+    [C+_Grade]   INT DEFAULT ((0)) NOT NULL,
+    [C_Grade]    INT DEFAULT ((0)) NOT NULL,
+    [C-_Grade]   INT DEFAULT ((0)) NOT NULL,
+    [F_Grade]    INT DEFAULT ((0)) NOT NULL,
+    [Section_Id] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Grade_ToSection] FOREIGN KEY ([Section_Id]) REFERENCES [dbo].[Section] ([Id]) ON DELETE CASCADE
 );
 
 CREATE TABLE [dbo].[Section] (
@@ -47,19 +49,17 @@ CREATE TABLE [dbo].[Section] (
     [Friday]     BIT           DEFAULT ((0)) NOT NULL,
     [Time]       NVARCHAR (50) NOT NULL,
     [Semester]   NVARCHAR (50) NOT NULL,
-    [Grade_Id] INT NOT NULL, 
+    [Grade_Id]   INT           NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_Section_ToCourse] FOREIGN KEY ([Course_Id]) REFERENCES [dbo].[Course] ([Id]),
-    CONSTRAINT [FK_Section_ToFaculty] FOREIGN KEY ([Faculty_Id]) REFERENCES [dbo].[Faculty] ([Id]), 
-    CONSTRAINT [FK_Section_ToGrade] FOREIGN KEY ([Grade_Id]) REFERENCES [Grade]([Id])
+    CONSTRAINT [FK_Section_ToGrade] FOREIGN KEY ([Grade_Id]) REFERENCES [dbo].[Grade] ([Id]),
+    CONSTRAINT [FK_Section_ToCourse] FOREIGN KEY ([Course_Id]) REFERENCES [dbo].[Course] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Section_ToFaculty] FOREIGN KEY ([Faculty_Id]) REFERENCES [dbo].[Faculty] ([Id])
 );
 
 CREATE TABLE [dbo].[Student] (
     [Id]       INT           IDENTITY (1, 1) NOT NULL,
     [Name]     NVARCHAR (50) NOT NULL,
-    [Major_Id] INT           NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_Student_ToMajor] FOREIGN KEY ([Major_Id]) REFERENCES [dbo].[Major] ([Id])
 );
 
 CREATE TABLE [dbo].[Enrollment] (
@@ -69,4 +69,13 @@ CREATE TABLE [dbo].[Enrollment] (
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_Enrollment_ToStudent] FOREIGN KEY ([Student_Id]) REFERENCES [dbo].[Student] ([Id]),
     CONSTRAINT [FK_Enrollment_ToSection] FOREIGN KEY ([Section_Id]) REFERENCES [dbo].[Section] ([Id])
+);
+
+CREATE TABLE [dbo].[Student-Major] (
+    [Id]         INT NOT NULL,
+    [Student_Id] INT NOT NULL,
+    [Major_Id]   INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Student-Major_ToStudent] FOREIGN KEY ([Student_Id]) REFERENCES [dbo].[Student] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Student-Major_ToMajor] FOREIGN KEY ([Major_Id]) REFERENCES [dbo].[Major] ([Id]) ON DELETE CASCADE
 );
