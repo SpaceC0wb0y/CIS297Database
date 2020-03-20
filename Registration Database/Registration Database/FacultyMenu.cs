@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Registration_Database {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class FacultyMenu : Form {
+        public FacultyMenu() {
             InitializeComponent();
         }
     }
