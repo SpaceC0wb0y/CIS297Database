@@ -14,12 +14,6 @@ namespace Registration_Database
     
     public partial class Grade
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Grade()
-        {
-            this.Sections = new HashSet<Section>();
-        }
-    
         public int Id { get; set; }
         public int A_Grade { get; set; }
         public int A__Grade { get; set; }
@@ -32,8 +26,6 @@ namespace Registration_Database
         public int F_Grade { get; set; }
         public int Section_Id { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Section> Sections { get; set; }
         public virtual Section Section { get; set; }
     }
 }
