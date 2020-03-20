@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CourseListBox = new System.Windows.Forms.ListBox();
-            this.CoursesLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.SelectedCourselabel = new System.Windows.Forms.Label();
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -124,15 +123,6 @@
             this.CourseListBox.TabIndex = 10;
             this.CourseListBox.SelectedIndexChanged += new System.EventHandler(this.CourseListBox_SelectedIndexChanged);
             // 
-            // CoursesLabel
-            // 
-            this.CoursesLabel.AutoSize = true;
-            this.CoursesLabel.Location = new System.Drawing.Point(334, 161);
-            this.CoursesLabel.Name = "CoursesLabel";
-            this.CoursesLabel.Size = new System.Drawing.Size(13, 13);
-            this.CoursesLabel.TabIndex = 11;
-            this.CoursesLabel.Text = "..";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -145,7 +135,7 @@
             // SelectedCourselabel
             // 
             this.SelectedCourselabel.AutoSize = true;
-            this.SelectedCourselabel.Location = new System.Drawing.Point(141, 277);
+            this.SelectedCourselabel.Location = new System.Drawing.Point(334, 143);
             this.SelectedCourselabel.Name = "SelectedCourselabel";
             this.SelectedCourselabel.Size = new System.Drawing.Size(35, 13);
             this.SelectedCourselabel.TabIndex = 13;
@@ -158,7 +148,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SelectedCourselabel);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.CoursesLabel);
             this.Controls.Add(this.CourseListBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -188,7 +177,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox CourseListBox;
-        private System.Windows.Forms.Label CoursesLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label SelectedCourselabel;
         private System.Windows.Forms.BindingSource courseBindingSource;
