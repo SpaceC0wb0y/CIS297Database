@@ -132,13 +132,13 @@ namespace Registration_Database {
 
         private void CourseListBox_SelectedIndexChanged(object sender, EventArgs e) {
 
-            Course selectedcourse = CourseListBox.SelectedItem as Course;
+            Course selectedCourse = CourseListBox.SelectedItem as Course;
 
-            IdTextBox.Text = selectedcourse.Id.ToString();
-            DepartmentTextBox.Text = selectedcourse.Department;
-            NumberTextBox.Text = selectedcourse.Number;
-            NameTextBox.Text = selectedcourse.Name;
-            CreditsTextBox.Text = selectedcourse.Credits.ToString();
+            IdTextBox.Text = selectedCourse.Id.ToString();
+            DepartmentTextBox.Text = selectedCourse.Department;
+            NumberTextBox.Text = selectedCourse.Number;
+            NameTextBox.Text = selectedCourse.Name;
+            CreditsTextBox.Text = selectedCourse.Credits.ToString();
         }
     }
 }
