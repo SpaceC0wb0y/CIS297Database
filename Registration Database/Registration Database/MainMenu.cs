@@ -88,6 +88,15 @@ namespace Registration_Database {
                 selectedcourse.Name = NameTextBox.Text;
                 selectedcourse.Credits = Convert.ToInt32(CreditsTextBox.Text);
 
+                try {
+
+                    RegistrationDatabase.SaveChanges();
+                }
+                catch (DbUpdateException ex) {
+
+                    MessageBox.Show(ex.ToString());
+                }
+
                 BindCourseList();
             }
         }
