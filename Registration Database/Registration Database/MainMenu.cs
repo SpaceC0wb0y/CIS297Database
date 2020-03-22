@@ -94,10 +94,10 @@ namespace Registration_Database {
 
         private void AddingCourse() {
 
-            if (!String.IsNullOrEmpty(DepartmentTextBox.Text) &&
-                !String.IsNullOrEmpty(NumberTextBox.Text) &&
-                !String.IsNullOrEmpty(NameTextBox.Text) &&
-                !String.IsNullOrEmpty(CreditsTextBox.Text)) {
+            if (!String.IsNullOrWhiteSpace(DepartmentTextBox.Text) &&
+                !String.IsNullOrWhiteSpace(NumberTextBox.Text) &&
+                !String.IsNullOrWhiteSpace(NameTextBox.Text) &&
+                !String.IsNullOrWhiteSpace(CreditsTextBox.Text)) {
 
                 Course newCourse = new Course {
 
