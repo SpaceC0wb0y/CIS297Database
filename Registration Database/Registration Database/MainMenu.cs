@@ -51,14 +51,14 @@ namespace Registration_Database {
             DeleteCourse();
         }
 
-        private void ClearFeildsButton_Click(object sender, EventArgs e) {
+        private void ClearCourseFieldsButton_Click(object sender, EventArgs e) {
 
-            IdTextBox.Text = DepartmentTextBox.Text = NumberTextBox.Text = NameTextBox.Text = CreditsTextBox.Text = "";
+            courseIdTextBox.Text = courseDepartmentTextBox.Text = courseNumberTextBox.Text = courseNameTextBox.Text = courseCreditsTextBox.Text = "";
         }
 
         private void DeleteCourse() {
 
-            if (!String.IsNullOrEmpty(IdTextBox.Text)) {
+            if (!String.IsNullOrEmpty(courseIdTextBox.Text)) {
 
                 Course selectedcourse = CourseListBox.SelectedItem as Course;
 
@@ -79,14 +79,14 @@ namespace Registration_Database {
 
         private void UpdatingCourse() {
 
-            if (!String.IsNullOrEmpty(IdTextBox.Text)) {
+            if (!String.IsNullOrEmpty(courseIdTextBox.Text)) {
 
                 Course selectedcourse = CourseListBox.SelectedItem as Course;
 
-                selectedcourse.Department = DepartmentTextBox.Text;
-                selectedcourse.Number = NumberTextBox.Text;
-                selectedcourse.Name = NameTextBox.Text;
-                selectedcourse.Credits = Convert.ToInt32(CreditsTextBox.Text);
+                selectedcourse.Department = courseDepartmentTextBox.Text;
+                selectedcourse.Number = courseNumberTextBox.Text;
+                selectedcourse.Name = courseNameTextBox.Text;
+                selectedcourse.Credits = Convert.ToInt32(courseCreditsTextBox.Text);
 
                 try {
 
@@ -103,21 +103,21 @@ namespace Registration_Database {
 
         private void AddingCourse() {
 
-            if (!String.IsNullOrWhiteSpace(DepartmentTextBox.Text) &&
-                !String.IsNullOrWhiteSpace(NumberTextBox.Text) &&
-                !String.IsNullOrWhiteSpace(NameTextBox.Text) &&
-                !String.IsNullOrWhiteSpace(CreditsTextBox.Text)) {
+            if (!String.IsNullOrWhiteSpace(courseDepartmentTextBox.Text) &&
+                !String.IsNullOrWhiteSpace(courseNumberTextBox.Text) &&
+                !String.IsNullOrWhiteSpace(courseNameTextBox.Text) &&
+                !String.IsNullOrWhiteSpace(courseCreditsTextBox.Text)) {
 
                 Course newCourse = new Course {
 
-                    Department = DepartmentTextBox.Text,
-                    Number = NumberTextBox.Text,
-                    Name = NameTextBox.Text
+                    Department = courseDepartmentTextBox.Text,
+                    Number = courseNumberTextBox.Text,
+                    Name = courseNameTextBox.Text
                 };
 
                 try {
 
-                    newCourse.Credits = Convert.ToInt32(CreditsTextBox.Text);
+                    newCourse.Credits = Convert.ToInt32(courseCreditsTextBox.Text);
                 }
                 catch (Exception) {
 
@@ -143,11 +143,11 @@ namespace Registration_Database {
 
             Course selectedCourse = CourseListBox.SelectedItem as Course;
 
-            IdTextBox.Text = selectedCourse.Id.ToString();
-            DepartmentTextBox.Text = selectedCourse.Department;
-            NumberTextBox.Text = selectedCourse.Number;
-            NameTextBox.Text = selectedCourse.Name;
-            CreditsTextBox.Text = selectedCourse.Credits.ToString();
+            courseIdTextBox.Text = selectedCourse.Id.ToString();
+            courseDepartmentTextBox.Text = selectedCourse.Department;
+            courseNumberTextBox.Text = selectedCourse.Number;
+            courseNameTextBox.Text = selectedCourse.Name;
+            courseCreditsTextBox.Text = selectedCourse.Credits.ToString();
         }
     }
 }

@@ -25,10 +25,10 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.AddCourseButton = new System.Windows.Forms.Button();
-            this.DepartmentTextBox = new System.Windows.Forms.TextBox();
-            this.NumberTextBox = new System.Windows.Forms.TextBox();
-            this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.CreditsTextBox = new System.Windows.Forms.TextBox();
+            this.courseDepartmentTextBox = new System.Windows.Forms.TextBox();
+            this.courseNumberTextBox = new System.Windows.Forms.TextBox();
+            this.courseNameTextBox = new System.Windows.Forms.TextBox();
+            this.courseCreditsTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,8 +39,8 @@
             this.UpdateCourseButton = new System.Windows.Forms.Button();
             this.DeleteCourseButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.IdTextBox = new System.Windows.Forms.TextBox();
-            this.ClearFeildsButton = new System.Windows.Forms.Button();
+            this.courseIdTextBox = new System.Windows.Forms.TextBox();
+            this.ClearCourseFieldsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,33 +54,33 @@
             this.AddCourseButton.UseVisualStyleBackColor = true;
             this.AddCourseButton.Click += new System.EventHandler(this.AddCourseButton_Click);
             // 
-            // DepartmentTextBox
+            // courseDepartmentTextBox
             // 
-            this.DepartmentTextBox.Location = new System.Drawing.Point(373, 52);
-            this.DepartmentTextBox.Name = "DepartmentTextBox";
-            this.DepartmentTextBox.Size = new System.Drawing.Size(100, 20);
-            this.DepartmentTextBox.TabIndex = 2;
+            this.courseDepartmentTextBox.Location = new System.Drawing.Point(373, 52);
+            this.courseDepartmentTextBox.Name = "courseDepartmentTextBox";
+            this.courseDepartmentTextBox.Size = new System.Drawing.Size(100, 20);
+            this.courseDepartmentTextBox.TabIndex = 2;
             // 
-            // NumberTextBox
+            // courseNumberTextBox
             // 
-            this.NumberTextBox.Location = new System.Drawing.Point(373, 78);
-            this.NumberTextBox.Name = "NumberTextBox";
-            this.NumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.NumberTextBox.TabIndex = 3;
+            this.courseNumberTextBox.Location = new System.Drawing.Point(373, 78);
+            this.courseNumberTextBox.Name = "courseNumberTextBox";
+            this.courseNumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.courseNumberTextBox.TabIndex = 3;
             // 
-            // NameTextBox
+            // courseNameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(373, 104);
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.NameTextBox.TabIndex = 4;
+            this.courseNameTextBox.Location = new System.Drawing.Point(373, 104);
+            this.courseNameTextBox.Name = "courseNameTextBox";
+            this.courseNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.courseNameTextBox.TabIndex = 4;
             // 
-            // CreditsTextBox
+            // courseCreditsTextBox
             // 
-            this.CreditsTextBox.Location = new System.Drawing.Point(373, 130);
-            this.CreditsTextBox.Name = "CreditsTextBox";
-            this.CreditsTextBox.Size = new System.Drawing.Size(100, 20);
-            this.CreditsTextBox.TabIndex = 5;
+            this.courseCreditsTextBox.Location = new System.Drawing.Point(373, 130);
+            this.courseCreditsTextBox.Name = "courseCreditsTextBox";
+            this.courseCreditsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.courseCreditsTextBox.TabIndex = 5;
             // 
             // label1
             // 
@@ -165,31 +165,31 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "ID";
             // 
-            // IdTextBox
+            // courseIdTextBox
             // 
-            this.IdTextBox.Location = new System.Drawing.Point(373, 27);
-            this.IdTextBox.Name = "IdTextBox";
-            this.IdTextBox.ReadOnly = true;
-            this.IdTextBox.Size = new System.Drawing.Size(100, 20);
-            this.IdTextBox.TabIndex = 17;
+            this.courseIdTextBox.Location = new System.Drawing.Point(373, 27);
+            this.courseIdTextBox.Name = "courseIdTextBox";
+            this.courseIdTextBox.ReadOnly = true;
+            this.courseIdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.courseIdTextBox.TabIndex = 17;
             // 
-            // ClearFeildsButton
+            // ClearCourseFieldsButton
             // 
-            this.ClearFeildsButton.Location = new System.Drawing.Point(497, 25);
-            this.ClearFeildsButton.Name = "ClearFeildsButton";
-            this.ClearFeildsButton.Size = new System.Drawing.Size(75, 23);
-            this.ClearFeildsButton.TabIndex = 18;
-            this.ClearFeildsButton.Text = "Clear Feilds";
-            this.ClearFeildsButton.UseVisualStyleBackColor = true;
-            this.ClearFeildsButton.Click += new System.EventHandler(this.ClearFeildsButton_Click);
+            this.ClearCourseFieldsButton.Location = new System.Drawing.Point(497, 25);
+            this.ClearCourseFieldsButton.Name = "ClearCourseFieldsButton";
+            this.ClearCourseFieldsButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearCourseFieldsButton.TabIndex = 18;
+            this.ClearCourseFieldsButton.Text = "Clear Fields";
+            this.ClearCourseFieldsButton.UseVisualStyleBackColor = true;
+            this.ClearCourseFieldsButton.Click += new System.EventHandler(this.ClearCourseFieldsButton_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ClearFeildsButton);
-            this.Controls.Add(this.IdTextBox);
+            this.Controls.Add(this.ClearCourseFieldsButton);
+            this.Controls.Add(this.courseIdTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.DeleteCourseButton);
             this.Controls.Add(this.UpdateCourseButton);
@@ -199,10 +199,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CreditsTextBox);
-            this.Controls.Add(this.NameTextBox);
-            this.Controls.Add(this.NumberTextBox);
-            this.Controls.Add(this.DepartmentTextBox);
+            this.Controls.Add(this.courseCreditsTextBox);
+            this.Controls.Add(this.courseNameTextBox);
+            this.Controls.Add(this.courseNumberTextBox);
+            this.Controls.Add(this.courseDepartmentTextBox);
             this.Controls.Add(this.AddCourseButton);
             this.Name = "MainMenu";
             this.Enter += new System.EventHandler(this.MainMenu_Enter);
@@ -214,10 +214,10 @@
 
         #endregion
         private System.Windows.Forms.Button AddCourseButton;
-        private System.Windows.Forms.TextBox DepartmentTextBox;
-        private System.Windows.Forms.TextBox NumberTextBox;
-        private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TextBox CreditsTextBox;
+        private System.Windows.Forms.TextBox courseDepartmentTextBox;
+        private System.Windows.Forms.TextBox courseNumberTextBox;
+        private System.Windows.Forms.TextBox courseNameTextBox;
+        private System.Windows.Forms.TextBox courseCreditsTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -228,8 +228,8 @@
         private System.Windows.Forms.Button UpdateCourseButton;
         private System.Windows.Forms.Button DeleteCourseButton;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox IdTextBox;
-        private System.Windows.Forms.Button ClearFeildsButton;
+        private System.Windows.Forms.TextBox courseIdTextBox;
+        private System.Windows.Forms.Button ClearCourseFieldsButton;
     }
 }
 

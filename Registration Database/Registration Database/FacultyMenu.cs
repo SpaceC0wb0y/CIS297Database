@@ -31,7 +31,7 @@ namespace Registration_Database {
             FacultyListBox.ValueMember = "Id";
         }
 
-        private void ClearFieldsButton_Click(object sender, EventArgs e) {
+        private void ClearFacultyFieldsButton_Click(object sender, EventArgs e) {
 
             facultyIDTextBox.Text = facultyNameTextBox.Text = facultyPhoneTextBox.Text = facultyOfficeTextBox.Text = "";
         }

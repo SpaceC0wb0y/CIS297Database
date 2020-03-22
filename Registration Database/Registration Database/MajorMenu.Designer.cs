@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.MajorListBox = new System.Windows.Forms.ListBox();
-            this.ClearFieldsButton = new System.Windows.Forms.Button();
+            this.ClearMajorFieldsButton = new System.Windows.Forms.Button();
             this.UpdateMajorButton = new System.Windows.Forms.Button();
             this.DeleteMajorButton = new System.Windows.Forms.Button();
             this.AddMajorButton = new System.Windows.Forms.Button();
@@ -44,15 +44,15 @@
             this.MajorListBox.TabIndex = 43;
             this.MajorListBox.SelectedIndexChanged += new System.EventHandler(this.MajorListBox_SelectedIndexChanged);
             // 
-            // ClearFieldsButton
+            // ClearMajorFieldsButton
             // 
-            this.ClearFieldsButton.Location = new System.Drawing.Point(590, 22);
-            this.ClearFieldsButton.Name = "ClearFieldsButton";
-            this.ClearFieldsButton.Size = new System.Drawing.Size(102, 30);
-            this.ClearFieldsButton.TabIndex = 42;
-            this.ClearFieldsButton.Text = "Clear Fields";
-            this.ClearFieldsButton.UseVisualStyleBackColor = true;
-            this.ClearFieldsButton.Click += new System.EventHandler(this.ClearFieldsButton_Click);
+            this.ClearMajorFieldsButton.Location = new System.Drawing.Point(590, 22);
+            this.ClearMajorFieldsButton.Name = "ClearMajorFieldsButton";
+            this.ClearMajorFieldsButton.Size = new System.Drawing.Size(102, 30);
+            this.ClearMajorFieldsButton.TabIndex = 42;
+            this.ClearMajorFieldsButton.Text = "Clear Fields";
+            this.ClearMajorFieldsButton.UseVisualStyleBackColor = true;
+            this.ClearMajorFieldsButton.Click += new System.EventHandler(this.ClearMajorFieldsButton_Click);
             // 
             // UpdateMajorButton
             // 
@@ -137,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 277);
             this.Controls.Add(this.MajorListBox);
-            this.Controls.Add(this.ClearFieldsButton);
+            this.Controls.Add(this.ClearMajorFieldsButton);
             this.Controls.Add(this.UpdateMajorButton);
             this.Controls.Add(this.DeleteMajorButton);
             this.Controls.Add(this.AddMajorButton);
@@ -156,7 +156,7 @@
 
         #endregion
         private System.Windows.Forms.ListBox MajorListBox;
-        private System.Windows.Forms.Button ClearFieldsButton;
+        private System.Windows.Forms.Button ClearMajorFieldsButton;
         private System.Windows.Forms.Button UpdateMajorButton;
         private System.Windows.Forms.Button DeleteMajorButton;
         private System.Windows.Forms.Button AddMajorButton;

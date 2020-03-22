@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.FacultyListBox = new System.Windows.Forms.ListBox();
-            this.ClearFieldsButton = new System.Windows.Forms.Button();
+            this.ClearFacultyFieldsButton = new System.Windows.Forms.Button();
             this.UpdateFacultyButton = new System.Windows.Forms.Button();
             this.DeleteFacultyButton = new System.Windows.Forms.Button();
             this.AddFacultyButton = new System.Windows.Forms.Button();
@@ -48,15 +48,15 @@
             this.FacultyListBox.TabIndex = 53;
             this.FacultyListBox.SelectedIndexChanged += new System.EventHandler(this.FacultyListBox_SelectedIndexChanged);
             // 
-            // ClearFieldsButton
+            // ClearFacultyFieldsButton
             // 
-            this.ClearFieldsButton.Location = new System.Drawing.Point(590, 22);
-            this.ClearFieldsButton.Name = "ClearFieldsButton";
-            this.ClearFieldsButton.Size = new System.Drawing.Size(102, 30);
-            this.ClearFieldsButton.TabIndex = 52;
-            this.ClearFieldsButton.Text = "Clear Fields";
-            this.ClearFieldsButton.UseVisualStyleBackColor = true;
-            this.ClearFieldsButton.Click += new System.EventHandler(this.ClearFieldsButton_Click);
+            this.ClearFacultyFieldsButton.Location = new System.Drawing.Point(590, 22);
+            this.ClearFacultyFieldsButton.Name = "ClearFacultyFieldsButton";
+            this.ClearFacultyFieldsButton.Size = new System.Drawing.Size(102, 30);
+            this.ClearFacultyFieldsButton.TabIndex = 52;
+            this.ClearFacultyFieldsButton.Text = "Clear Fields";
+            this.ClearFacultyFieldsButton.UseVisualStyleBackColor = true;
+            this.ClearFacultyFieldsButton.Click += new System.EventHandler(this.ClearFacultyFieldsButton_Click);
             // 
             // UpdateFacultyButton
             // 
@@ -179,7 +179,7 @@
             this.Controls.Add(this.facultyPhoneTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FacultyListBox);
-            this.Controls.Add(this.ClearFieldsButton);
+            this.Controls.Add(this.ClearFacultyFieldsButton);
             this.Controls.Add(this.UpdateFacultyButton);
             this.Controls.Add(this.DeleteFacultyButton);
             this.Controls.Add(this.AddFacultyButton);
@@ -199,7 +199,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox FacultyListBox;
-        private System.Windows.Forms.Button ClearFieldsButton;
+        private System.Windows.Forms.Button ClearFacultyFieldsButton;
         private System.Windows.Forms.Button UpdateFacultyButton;
         private System.Windows.Forms.Button DeleteFacultyButton;
         private System.Windows.Forms.Button AddFacultyButton;
