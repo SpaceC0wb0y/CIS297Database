@@ -20,6 +20,8 @@ namespace Registration_Database {
             InitializeComponent();
 
             RegistrationDatabase = new RegistrationDatabaseProjectEntities();
+
+            BindMajorList();
         }
 
         private void BindMajorList() {
