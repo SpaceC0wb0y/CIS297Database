@@ -60,7 +60,7 @@
             this.UpdateMajorButton.Name = "UpdateMajorButton";
             this.UpdateMajorButton.Size = new System.Drawing.Size(109, 30);
             this.UpdateMajorButton.TabIndex = 41;
-            this.UpdateMajorButton.Text = "Update User";
+            this.UpdateMajorButton.Text = "Update Major";
             this.UpdateMajorButton.UseVisualStyleBackColor = true;
             this.UpdateMajorButton.Click += new System.EventHandler(this.UpdateMajorButton_Click);
             // 
@@ -71,7 +71,7 @@
             this.DeleteMajorButton.Name = "DeleteMajorButton";
             this.DeleteMajorButton.Size = new System.Drawing.Size(103, 30);
             this.DeleteMajorButton.TabIndex = 40;
-            this.DeleteMajorButton.Text = "Delete User";
+            this.DeleteMajorButton.Text = "Delete Major";
             this.DeleteMajorButton.UseVisualStyleBackColor = false;
             this.DeleteMajorButton.Click += new System.EventHandler(this.DeleteMajorButton_Click);
             // 
@@ -82,7 +82,7 @@
             this.AddMajorButton.Name = "AddMajorButton";
             this.AddMajorButton.Size = new System.Drawing.Size(89, 30);
             this.AddMajorButton.TabIndex = 39;
-            this.AddMajorButton.Text = "Add User";
+            this.AddMajorButton.Text = "Add Major";
             this.AddMajorButton.UseVisualStyleBackColor = false;
             this.AddMajorButton.Click += new System.EventHandler(this.AddMajorButton_Click);
             // 
