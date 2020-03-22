@@ -31,7 +31,7 @@ namespace Registration_Database {
             MajorListBox.ValueMember = "Id";
         }
 
-        private void ClearFieldsButton_Click(object sender, EventArgs e) {
+        private void ClearMajorFieldsButton_Click(object sender, EventArgs e) {
 
             majorIDTextBox.Text = majorNameTextBox.Text = "";
         }

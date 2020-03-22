@@ -129,6 +129,9 @@
     <Compile Include="Student_Major.cs">
       <DependentUpon>RegistrationDatabaseModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FacultyMenu.resx">
+      <DependentUpon>FacultyMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
