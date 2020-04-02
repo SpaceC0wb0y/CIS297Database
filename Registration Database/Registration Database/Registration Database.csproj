@@ -74,6 +74,12 @@
     <Compile Include="FacultyMenu.Designer.cs">
       <DependentUpon>FacultyMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GradeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeMenu.Designer.cs">
+      <DependentUpon>GradeMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grade.cs">
       <DependentUpon>RegistrationDatabaseModel.tt</DependentUpon>
     </Compile>
@@ -133,6 +139,9 @@
     <EmbeddedResource Include="FacultyMenu.resx">
       <DependentUpon>FacultyMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GradeMenu.resx">
+      <DependentUpon>GradeMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="SectionsMenu.resx">
       <DependentUpon>SectionsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentMenu.resx">
+      <DependentUpon>StudentMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
