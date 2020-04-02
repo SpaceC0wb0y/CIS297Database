@@ -83,7 +83,7 @@ namespace Registration_Database {
 
                 Section selectedSection = sectionListBox.SelectedItem as Section;
 
-                RegistrationDatabase.Faculties.Remove(selectedSection);
+                RegistrationDatabase.Sections.Remove(selectedSection);
 
                 try
                 {
