@@ -16,15 +16,15 @@ namespace Registration_Database
     {
         public int Id { get; set; }
         public int A_Grade { get; set; }
-        public int Aminus_Grade { get; set; }
-        public int Bplus_Grade { get; set; }
         public int B_Grade { get; set; }
-        public int Bminus__Grade { get; set; }
-        public int Cplus__Grade { get; set; }
         public int C_Grade { get; set; }
-        public int Cminus__Grade { get; set; }
         public int F_Grade { get; set; }
         public int Section_Id { get; set; }
+        public int Aminus_Grade { get; set; }
+        public int Bplus_Grade { get; set; }
+        public int Bminus_Grade { get; set; }
+        public int Cplus_Grade { get; set; }
+        public int Cminus_Grade { get; set; }
     
         public virtual Section Section { get; set; }
     }

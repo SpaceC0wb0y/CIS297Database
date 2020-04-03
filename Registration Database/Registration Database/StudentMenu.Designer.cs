@@ -24,10 +24,10 @@
         /// </summary>
         private void InitializeComponent() {
             this.idTextBox = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.Label();
+            this.IDLabel = new System.Windows.Forms.Label();
             this.studentListBox = new System.Windows.Forms.ListBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.Name = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
@@ -40,14 +40,14 @@
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 9;
             // 
-            // ID
+            // IDLabel
             // 
-            this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(12, 9);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(18, 13);
-            this.ID.TabIndex = 10;
-            this.ID.Text = "ID";
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Location = new System.Drawing.Point(12, 9);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(18, 13);
+            this.IDLabel.TabIndex = 10;
+            this.IDLabel.Text = "ID";
             // 
             // studentListBox
             // 
@@ -64,14 +64,14 @@
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 16;
             // 
-            // Name
+            // NameLabel
             // 
-            this.Name.AutoSize = true;
-            this.Name.Location = new System.Drawing.Point(8, 49);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(35, 13);
-            this.Name.TabIndex = 17;
-            this.Name.Text = "Name";
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Location = new System.Drawing.Point(8, 49);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(35, 13);
+            this.NameLabel.TabIndex = 17;
+            this.NameLabel.Text = "Name";
             // 
             // AddButton
             // 
@@ -111,10 +111,10 @@
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.Name);
+            this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.studentListBox);
-            this.Controls.Add(this.ID);
+            this.Controls.Add(this.IDLabel);
             this.Controls.Add(this.idTextBox);
             this.Name = "StudentMenu";
             this.Text = "StudentMenu";
@@ -127,10 +127,10 @@
         #endregion
 
         private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.Label ID;
+        private System.Windows.Forms.Label IDLabel;
         private System.Windows.Forms.ListBox studentListBox;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.Label Name;
+        private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button updateButton;

@@ -38,13 +38,13 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="A_Grade" Type="int" Nullable="false" />
-          <Property Name="A-_Grade" Type="int" Nullable="false" />
-          <Property Name="B+_Grade" Type="int" Nullable="false" />
+          <Property Name="Aminus_Grade" Type="int" Nullable="false" />
+          <Property Name="Bplus_Grade" Type="int" Nullable="false" />
           <Property Name="B_Grade" Type="int" Nullable="false" />
-          <Property Name="B-_Grade" Type="int" Nullable="false" />
-          <Property Name="C+_Grade" Type="int" Nullable="false" />
+          <Property Name="Bminus_Grade" Type="int" Nullable="false" />
+          <Property Name="Cplus_Grade" Type="int" Nullable="false" />
           <Property Name="C_Grade" Type="int" Nullable="false" />
-          <Property Name="C-_Grade" Type="int" Nullable="false" />
+          <Property Name="Cminus_Grade" Type="int" Nullable="false" />
           <Property Name="F_Grade" Type="int" Nullable="false" />
           <Property Name="Section_Id" Type="int" Nullable="false" />
         </EntityType>
@@ -261,16 +261,16 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="A_Grade" Type="Int32" Nullable="false" />
-          <Property Name="A__Grade" Type="Int32" Nullable="false" />
-          <Property Name="B__Grade" Type="Int32" Nullable="false" />
           <Property Name="B_Grade" Type="Int32" Nullable="false" />
-          <Property Name="B__Grade1" Type="Int32" Nullable="false" />
-          <Property Name="C__Grade" Type="Int32" Nullable="false" />
           <Property Name="C_Grade" Type="Int32" Nullable="false" />
-          <Property Name="C__Grade1" Type="Int32" Nullable="false" />
           <Property Name="F_Grade" Type="Int32" Nullable="false" />
           <Property Name="Section_Id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Section" Relationship="RegistrationDatabaseProjectModel.FK_Grade_ToSection" FromRole="Grade" ToRole="Section" />
+          <Property Name="Aminus_Grade" Type="Int32" Nullable="false" />
+          <Property Name="Bplus_Grade" Type="Int32" Nullable="false" />
+          <Property Name="Bminus_Grade" Type="Int32" Nullable="false" />
+          <Property Name="Cplus_Grade" Type="Int32" Nullable="false" />
+          <Property Name="Cminus_Grade" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Major">
           <Key>
@@ -486,16 +486,16 @@
           <EntitySetMapping Name="Grades">
             <EntityTypeMapping TypeName="RegistrationDatabaseProjectModel.Grade">
               <MappingFragment StoreEntitySet="Grade">
+                <ScalarProperty Name="Cminus_Grade" ColumnName="Cminus_Grade" />
+                <ScalarProperty Name="Cplus_Grade" ColumnName="Cplus_Grade" />
+                <ScalarProperty Name="Bminus_Grade" ColumnName="Bminus_Grade" />
+                <ScalarProperty Name="Bplus_Grade" ColumnName="Bplus_Grade" />
+                <ScalarProperty Name="Aminus_Grade" ColumnName="Aminus_Grade" />
                 <ScalarProperty Name="Section_Id" ColumnName="Section_Id" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="A_Grade" ColumnName="A_Grade" />
-                <ScalarProperty Name="A__Grade" ColumnName="A-_Grade" />
-                <ScalarProperty Name="B__Grade" ColumnName="B+_Grade" />
                 <ScalarProperty Name="B_Grade" ColumnName="B_Grade" />
-                <ScalarProperty Name="B__Grade1" ColumnName="B-_Grade" />
-                <ScalarProperty Name="C__Grade" ColumnName="C+_Grade" />
                 <ScalarProperty Name="C_Grade" ColumnName="C_Grade" />
-                <ScalarProperty Name="C__Grade1" ColumnName="C-_Grade" />
                 <ScalarProperty Name="F_Grade" ColumnName="F_Grade" />
               </MappingFragment>
             </EntityTypeMapping>

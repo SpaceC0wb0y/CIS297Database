@@ -22,17 +22,17 @@ CREATE TABLE [dbo].[Faculty] (
 );
 
 CREATE TABLE [dbo].[Grade] (
-    [Id]         INT IDENTITY (1, 1) NOT NULL,
-    [A_Grade]    INT DEFAULT ((0)) NOT NULL,
-    [A-_Grade]   INT DEFAULT ((0)) NOT NULL,
-    [B+_Grade]   INT DEFAULT ((0)) NOT NULL,
-    [B_Grade]    INT DEFAULT ((0)) NOT NULL,
-    [B-_Grade]   INT DEFAULT ((0)) NOT NULL,
-    [C+_Grade]   INT DEFAULT ((0)) NOT NULL,
-    [C_Grade]    INT DEFAULT ((0)) NOT NULL,
-    [C-_Grade]   INT DEFAULT ((0)) NOT NULL,
-    [F_Grade]    INT DEFAULT ((0)) NOT NULL,
-    [Section_Id] INT NOT NULL,
+    [Id]           INT IDENTITY (1, 1) NOT NULL,
+    [A_Grade]      INT DEFAULT ((0)) NOT NULL,
+    [Aminus_Grade] INT DEFAULT ((0)) NOT NULL,
+    [Bplus_Grade]  INT DEFAULT ((0)) NOT NULL,
+    [B_Grade]      INT DEFAULT ((0)) NOT NULL,
+    [Bminus_Grade] INT DEFAULT ((0)) NOT NULL,
+    [Cplus_Grade]  INT DEFAULT ((0)) NOT NULL,
+    [C_Grade]      INT DEFAULT ((0)) NOT NULL,
+    [Cminus_Grade] INT DEFAULT ((0)) NOT NULL,
+    [F_Grade]      INT DEFAULT ((0)) NOT NULL,
+    [Section_Id]   INT NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_Grade_ToSection] FOREIGN KEY ([Section_Id]) REFERENCES [dbo].[Section] ([Id]) ON DELETE CASCADE
 );

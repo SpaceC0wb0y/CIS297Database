@@ -41,10 +41,10 @@ namespace Registration_Database
                     Aminus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(1)),
                     Bplus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(2)),
                     B_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(3)),
-                    Bminus__Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(3)),
-                    Cplus__Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(4)),
+                    Bminus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(3)),
+                    Cplus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(4)),
                     C_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(5)),
-                    Cminus__Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(6)),
+                    Cminus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(6)),
                     F_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(6))
 
                 };
@@ -80,10 +80,10 @@ namespace Registration_Database
                 selectedGrade.Aminus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(1));
                 selectedGrade.Bplus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(2));
                 selectedGrade.B_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(3));
-                selectedGrade.Bminus__Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(3));
-                selectedGrade.Cplus__Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(4));
+                selectedGrade.Bminus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(3));
+                selectedGrade.Cplus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(4));
                 selectedGrade.C_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(5));
-                selectedGrade.Cminus__Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(6));
+                selectedGrade.Cminus_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(6));
                 selectedGrade.F_Grade = Convert.ToInt32(gradeCheckedListBox.GetItemChecked(6));
 
 

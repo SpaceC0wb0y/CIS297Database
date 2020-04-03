@@ -31,7 +31,14 @@ namespace Registration_Database {
 
         private void BindCourseList() {
 
-            CourseListBox.DataSource = RegistrationDatabase.Courses.ToList();
+            try {
+                CourseListBox.DataSource = RegistrationDatabase.Courses.ToList();
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show(ex.Message);
+            }
+            
             CourseListBox.DisplayMember = "Name";
             CourseListBox.ValueMember = "Id";
         }
