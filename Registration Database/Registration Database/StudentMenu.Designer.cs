@@ -31,6 +31,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
+            this.returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // idTextBox
@@ -103,11 +104,22 @@
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
+            // returnButton
+            // 
+            this.returnButton.Location = new System.Drawing.Point(508, 208);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(75, 23);
+            this.returnButton.TabIndex = 21;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
             // StudentMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.returnButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.AddButton);
@@ -118,6 +130,7 @@
             this.Controls.Add(this.idTextBox);
             this.Name = "StudentMenu";
             this.Text = "StudentMenu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentMenu_FormClosed);
             this.Load += new System.EventHandler(this.StudentMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,5 +147,6 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button returnButton;
     }
 }

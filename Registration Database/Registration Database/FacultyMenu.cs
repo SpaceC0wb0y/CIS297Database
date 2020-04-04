@@ -26,7 +26,7 @@ namespace Registration_Database {
 
         private void BindFacultyList() {
 
-            FacultyListBox.DataSource = RegistrationDatabase.Majors.ToList();
+            FacultyListBox.DataSource = RegistrationDatabase.Faculties.ToList();
             FacultyListBox.DisplayMember = "Name";
             FacultyListBox.ValueMember = "Id";
         }
@@ -132,6 +132,24 @@ namespace Registration_Database {
             facultyNameTextBox.Text = selectedFaculty.Name;
             facultyPhoneTextBox.Text = selectedFaculty.Phone;
             facultyOfficeTextBox.Text = selectedFaculty.Office;
+        }
+
+        private void returnButton_Click(object sender, EventArgs e) {
+
+            this.Close();
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.Show();
+        }
+
+        private void FacultyMenu_FormClosed(object sender, FormClosedEventArgs e) {
+
+            this.Close();
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.Show();
         }
     }
 }

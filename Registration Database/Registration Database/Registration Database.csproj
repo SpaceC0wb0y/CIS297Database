@@ -89,6 +89,12 @@
     <Compile Include="Grade.cs">
       <DependentUpon>RegistrationDatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CourseMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseMenu.Designer.cs">
+      <DependentUpon>CourseMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GradeMenu.resx">
       <DependentUpon>GradeMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseMenu.resx">
+      <DependentUpon>CourseMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

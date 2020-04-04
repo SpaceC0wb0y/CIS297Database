@@ -38,20 +38,25 @@
             this.addButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.studentListBox = new System.Windows.Forms.ListBox();
+            this.sectionListBox = new System.Windows.Forms.ListBox();
+            this.returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // enrollmentsListBox
             // 
             this.enrollmentsListBox.FormattingEnabled = true;
-            this.enrollmentsListBox.Location = new System.Drawing.Point(91, 141);
+            this.enrollmentsListBox.Location = new System.Drawing.Point(71, 141);
             this.enrollmentsListBox.Name = "enrollmentsListBox";
             this.enrollmentsListBox.Size = new System.Drawing.Size(120, 95);
             this.enrollmentsListBox.TabIndex = 0;
+            this.enrollmentsListBox.SelectedIndexChanged += new System.EventHandler(this.enrollmentsListBox_SelectedIndexChanged);
             // 
             // idTextBox
             // 
             this.idTextBox.Location = new System.Drawing.Point(91, 26);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 11;
             // 
@@ -68,6 +73,7 @@
             // 
             this.sectionIDTextBox.Location = new System.Drawing.Point(91, 65);
             this.sectionIDTextBox.Name = "sectionIDTextBox";
+            this.sectionIDTextBox.ReadOnly = true;
             this.sectionIDTextBox.Size = new System.Drawing.Size(100, 20);
             this.sectionIDTextBox.TabIndex = 14;
             // 
@@ -84,6 +90,7 @@
             // 
             this.studentIDTextBox.Location = new System.Drawing.Point(91, 101);
             this.studentIDTextBox.Name = "studentIDTextBox";
+            this.studentIDTextBox.ReadOnly = true;
             this.studentIDTextBox.Size = new System.Drawing.Size(100, 20);
             this.studentIDTextBox.TabIndex = 16;
             // 
@@ -126,11 +133,42 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
+            // studentListBox
+            // 
+            this.studentListBox.FormattingEnabled = true;
+            this.studentListBox.Location = new System.Drawing.Point(289, 141);
+            this.studentListBox.Name = "studentListBox";
+            this.studentListBox.Size = new System.Drawing.Size(120, 95);
+            this.studentListBox.TabIndex = 21;
+            this.studentListBox.SelectedIndexChanged += new System.EventHandler(this.studentListBox_SelectedIndexChanged);
+            // 
+            // sectionListBox
+            // 
+            this.sectionListBox.FormattingEnabled = true;
+            this.sectionListBox.Location = new System.Drawing.Point(289, 26);
+            this.sectionListBox.Name = "sectionListBox";
+            this.sectionListBox.Size = new System.Drawing.Size(120, 95);
+            this.sectionListBox.TabIndex = 22;
+            this.sectionListBox.SelectedIndexChanged += new System.EventHandler(this.sectionListBox_SelectedIndexChanged);
+            // 
+            // returnButton
+            // 
+            this.returnButton.Location = new System.Drawing.Point(488, 328);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(75, 23);
+            this.returnButton.TabIndex = 23;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
             // EnrollmentsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.returnButton);
+            this.Controls.Add(this.sectionListBox);
+            this.Controls.Add(this.studentListBox);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.addButton);
@@ -143,6 +181,7 @@
             this.Controls.Add(this.enrollmentsListBox);
             this.Name = "EnrollmentsMenu";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EnrollmentsMenu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +199,8 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.ListBox studentListBox;
+        private System.Windows.Forms.ListBox sectionListBox;
+        private System.Windows.Forms.Button returnButton;
     }
 }

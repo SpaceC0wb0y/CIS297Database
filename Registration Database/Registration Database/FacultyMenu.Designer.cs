@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.facultyOfficeTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FacultyListBox
@@ -169,11 +170,22 @@
             this.label2.TabIndex = 57;
             this.label2.Text = "Office:";
             // 
+            // returnButton
+            // 
+            this.returnButton.Location = new System.Drawing.Point(646, 267);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(75, 23);
+            this.returnButton.TabIndex = 59;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
             // FacultyMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 277);
+            this.ClientSize = new System.Drawing.Size(733, 302);
+            this.Controls.Add(this.returnButton);
             this.Controls.Add(this.facultyOfficeTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.facultyPhoneTextBox);
@@ -191,6 +203,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FacultyMenu";
             this.Text = "FacultyMenu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FacultyMenu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +225,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox facultyOfficeTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button returnButton;
     }
 }

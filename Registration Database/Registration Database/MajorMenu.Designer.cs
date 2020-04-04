@@ -33,6 +33,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MajorListBox
@@ -131,11 +132,22 @@
             this.textBox1.Size = new System.Drawing.Size(372, 251);
             this.textBox1.TabIndex = 44;
             // 
+            // returnButton
+            // 
+            this.returnButton.Location = new System.Drawing.Point(643, 270);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(75, 23);
+            this.returnButton.TabIndex = 45;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
             // MajorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 277);
+            this.ClientSize = new System.Drawing.Size(733, 305);
+            this.Controls.Add(this.returnButton);
             this.Controls.Add(this.MajorListBox);
             this.Controls.Add(this.ClearMajorFieldsButton);
             this.Controls.Add(this.UpdateMajorButton);
@@ -149,6 +161,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MajorMenu";
             this.Text = "MajorMenu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MajorMenu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +178,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button returnButton;
     }
 }

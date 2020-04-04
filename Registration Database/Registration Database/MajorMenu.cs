@@ -124,5 +124,23 @@ namespace Registration_Database {
             majorIDTextBox.Text = selectedMajor.Id.ToString();
             majorNameTextBox.Text = selectedMajor.Name;
         }
+
+        private void returnButton_Click(object sender, EventArgs e) {
+
+            this.Close();
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.Show();
+        }
+
+        private void MajorMenu_FormClosed(object sender, FormClosedEventArgs e) {
+
+            this.Close();
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.Show();
+        }
     }
 }

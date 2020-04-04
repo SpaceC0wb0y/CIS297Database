@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity.Infrastructure;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,148 +12,86 @@ namespace Registration_Database {
 
     public partial class MainMenu : Form {
 
-        RegistrationDatabaseProjectEntities RegistrationDatabase;
-
         public MainMenu() {
 
             InitializeComponent();
-
-            RegistrationDatabase = new RegistrationDatabaseProjectEntities();
-
-            BindCourseList();
         }
 
-        private void MainMenu_Enter(object sender, EventArgs e) {
+        private void CoursesButton_Click(object sender, EventArgs e) {
 
-            BindCourseList();
-        }
+            this.Hide();
 
-        private void BindCourseList() {
-
-            try {
-                CourseListBox.DataSource = RegistrationDatabase.Courses.ToList();
-            }
-            catch (Exception ex) {
-
-                MessageBox.Show(ex.Message);
-            }
+            CourseMenu coursesMenu = new CourseMenu();
             
-            CourseListBox.DisplayMember = "Name";
-            CourseListBox.ValueMember = "Id";
+            coursesMenu.Show();
         }
 
-        private void AddCourseButton_Click(object sender, EventArgs e) {
+        private void SectionsButton_Click(object sender, EventArgs e) {
 
-            AddingCourse();
+            this.Hide();
+
+            SectionsMenu sectionMenu = new SectionsMenu();
+            
+            sectionMenu.Show();
         }
 
-        private void UpdateCourseButton_Click(object sender, EventArgs e) {
+        private void FacultyButton_Click(object sender, EventArgs e) {
 
-            UpdatingCourse();
+            this.Hide();
+
+            FacultyMenu facultyMenu = new FacultyMenu();
+            
+            facultyMenu.Show();
         }
 
-        private void DeleteCourseButton_Click(object sender, EventArgs e) {
+        private void StudentsButton_Click(object sender, EventArgs e) {
 
-            DeleteCourse();
+            this.Hide();
+
+            StudentMenu studentMenu = new StudentMenu();
+            
+            studentMenu.Show();
         }
 
-        private void ClearCourseFieldsButton_Click(object sender, EventArgs e) {
+        private void MajorsButton_Click(object sender, EventArgs e) {
 
-            courseIdTextBox.Text = courseDepartmentTextBox.Text = courseNumberTextBox.Text = courseNameTextBox.Text = courseCreditsTextBox.Text = "";
+            this.Hide();
+
+            MajorMenu majorMenu = new MajorMenu();
+            
+            majorMenu.Show();
         }
 
-        private void DeleteCourse() {
+        private void EnrollmentButton_Click(object sender, EventArgs e) {
 
-            if (!String.IsNullOrEmpty(courseIdTextBox.Text)) {
+            this.Hide();
 
-                Course selectedcourse = CourseListBox.SelectedItem as Course;
+            EnrollmentsMenu enrollmentMenu = new EnrollmentsMenu();
+            
+            enrollmentMenu.Show();
+        }
 
-                RegistrationDatabase.Courses.Remove(selectedcourse);
+        private void GradesButton_Click(object sender, EventArgs e) {
 
-                try {
+            this.Hide();
 
-                    RegistrationDatabase.SaveChanges();
-                }
-                catch (DbUpdateException ex) {
+            GradeMenu gradeMenu = new GradeMenu();
+            
+            gradeMenu.Show();
+        }
 
-                    MessageBox.Show(ex.ToString());
-                }
+        private void MainMenu_FormClosed(object sender, FormClosedEventArgs e) {
 
-                BindCourseList();
+            if (System.Windows.Forms.Application.MessageLoop) {
+
+                // WinForms app
+                System.Windows.Forms.Application.Exit();
             }
-        }
+            else {
 
-        private void UpdatingCourse() {
-
-            if (!String.IsNullOrEmpty(courseIdTextBox.Text)) {
-
-                Course selectedcourse = CourseListBox.SelectedItem as Course;
-
-                selectedcourse.Department = courseDepartmentTextBox.Text;
-                selectedcourse.Number = courseNumberTextBox.Text;
-                selectedcourse.Name = courseNameTextBox.Text;
-                selectedcourse.Credits = Convert.ToInt32(courseCreditsTextBox.Text);
-
-                try {
-
-                    RegistrationDatabase.SaveChanges();
-                }
-                catch (DbUpdateException ex) {
-
-                    MessageBox.Show(ex.ToString());
-                }
-
-                BindCourseList();
+                // Console app
+                System.Environment.Exit(1);
             }
-        }
-
-        private void AddingCourse() {
-
-            if (!String.IsNullOrWhiteSpace(courseDepartmentTextBox.Text) &&
-                !String.IsNullOrWhiteSpace(courseNumberTextBox.Text) &&
-                !String.IsNullOrWhiteSpace(courseNameTextBox.Text) &&
-                !String.IsNullOrWhiteSpace(courseCreditsTextBox.Text)) {
-
-                Course newCourse = new Course {
-
-                    Department = courseDepartmentTextBox.Text,
-                    Number = courseNumberTextBox.Text,
-                    Name = courseNameTextBox.Text
-                };
-
-                try {
-
-                    newCourse.Credits = Convert.ToInt32(courseCreditsTextBox.Text);
-                }
-                catch (Exception) {
-
-                    MessageBox.Show("Course Credits Input is INVALID\nMust be number!!");
-                }
-
-                RegistrationDatabase.Courses.Add(newCourse);
-
-                try {
-
-                    RegistrationDatabase.SaveChanges();
-                }
-                catch (DbUpdateException ex) {
-
-                    MessageBox.Show(ex.ToString());
-                }
-
-                BindCourseList();
-            }
-        }
-
-        private void CourseListBox_SelectedIndexChanged(object sender, EventArgs e) {
-
-            Course selectedCourse = CourseListBox.SelectedItem as Course;
-
-            courseIdTextBox.Text = selectedCourse.Id.ToString();
-            courseDepartmentTextBox.Text = selectedCourse.Department;
-            courseNumberTextBox.Text = selectedCourse.Number;
-            courseNameTextBox.Text = selectedCourse.Name;
-            courseCreditsTextBox.Text = selectedCourse.Credits.ToString();
         }
     }
 }

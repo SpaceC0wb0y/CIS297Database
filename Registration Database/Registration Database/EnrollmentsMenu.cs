@@ -21,12 +21,29 @@ namespace Registration_Database
             RegistrationDatabase = new RegistrationDatabaseProjectEntities();
 
             BindEnrollmentsList();
+            BindStudentList();
+            BindSectionList();
         }
 
         private void BindEnrollmentsList()
         {
             enrollmentsListBox.DataSource = RegistrationDatabase.Enrollments.ToList();
             enrollmentsListBox.DisplayMember = "Id";
+            enrollmentsListBox.ValueMember = "Id";
+        }
+
+        private void BindStudentList() {
+
+            enrollmentsListBox.DataSource = RegistrationDatabase.Students.ToList();
+            enrollmentsListBox.DisplayMember = "Name";
+            enrollmentsListBox.ValueMember = "Id";
+        }
+
+        private void BindSectionList() {
+
+            enrollmentsListBox.DataSource = RegistrationDatabase.Sections.ToList();
+            enrollmentsListBox.DisplayMember = "Id";
+            enrollmentsListBox.ValueMember = "Id";
         }
 
         private void AddEnrollment()
@@ -62,6 +79,7 @@ namespace Registration_Database
 
 
         }
+
         private void UpdateEnrollment()
         {
             if (!String.IsNullOrEmpty(idTextBox.Text) && !String.IsNullOrEmpty(sectionIDTextBox.Text) && !String.IsNullOrEmpty(studentIDTextBox.Text))
@@ -123,6 +141,47 @@ namespace Registration_Database
         private void deleteButton_Click(object sender, EventArgs e)
         {
             DeleteEnrollment();
+        }
+
+        private void enrollmentsListBox_SelectedIndexChanged(object sender, EventArgs e) {
+
+            Enrollment selectedEnrollment = enrollmentsListBox.SelectedItem as Enrollment;
+
+            idTextBox.Text = selectedEnrollment.Id.ToString();
+            sectionIDTextBox.Text = selectedEnrollment.Section_Id.ToString();
+            studentIDTextBox.Text = selectedEnrollment.Student_Id.ToString();
+        }
+
+        private void sectionListBox_SelectedIndexChanged(object sender, EventArgs e) {
+
+            Section selectedSection = sectionListBox.SelectedItem as Section;
+
+            sectionIDTextBox.Text = selectedSection.Id.ToString();
+        }
+
+        private void studentListBox_SelectedIndexChanged(object sender, EventArgs e) {
+            
+            Student selectedSudent = studentListBox.SelectedItem as Student;
+
+            studentIDTextBox.Text = selectedSudent.Id.ToString();
+        }
+
+        private void returnButton_Click(object sender, EventArgs e) {
+
+            this.Close();
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.Show();
+        }
+
+        private void EnrollmentsMenu_FormClosed(object sender, FormClosedEventArgs e) {
+
+            this.Close();
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.Show();
         }
     }
 }

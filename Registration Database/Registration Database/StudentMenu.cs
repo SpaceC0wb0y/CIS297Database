@@ -131,5 +131,23 @@ namespace Registration_Database {
         {
             UpdateStudent();
         }
+
+        private void returnButton_Click(object sender, EventArgs e) {
+
+            this.Close();
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.Show();
+        }
+
+        private void StudentMenu_FormClosed(object sender, FormClosedEventArgs e) {
+
+            this.Close();
+
+            MainMenu mainMenu = new MainMenu();
+
+            mainMenu.Show();
+        }
     }
 }

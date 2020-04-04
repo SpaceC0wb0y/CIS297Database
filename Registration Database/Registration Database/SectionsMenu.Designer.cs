@@ -40,6 +40,9 @@
             this.sectionListBox = new System.Windows.Forms.ListBox();
             this.updateButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.courseListBox = new System.Windows.Forms.ListBox();
+            this.facultyListBox = new System.Windows.Forms.ListBox();
+            this.returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // daysBox
@@ -75,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 202);
+            this.label2.Location = new System.Drawing.Point(14, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 3;
@@ -83,8 +86,9 @@
             // 
             // courseIDTextBox
             // 
-            this.courseIDTextBox.Location = new System.Drawing.Point(70, 195);
+            this.courseIDTextBox.Location = new System.Drawing.Point(70, 70);
             this.courseIDTextBox.Name = "courseIDTextBox";
+            this.courseIDTextBox.ReadOnly = true;
             this.courseIDTextBox.Size = new System.Drawing.Size(100, 20);
             this.courseIDTextBox.TabIndex = 4;
             // 
@@ -116,15 +120,16 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(70, 77);
+            this.idTextBox.Location = new System.Drawing.Point(70, 21);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 8;
             // 
             // ID
             // 
             this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(18, 83);
+            this.ID.Location = new System.Drawing.Point(18, 27);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(18, 13);
             this.ID.TabIndex = 9;
@@ -132,7 +137,7 @@
             // 
             // timeTextBox
             // 
-            this.timeTextBox.Location = new System.Drawing.Point(346, 76);
+            this.timeTextBox.Location = new System.Drawing.Point(346, 74);
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.Size = new System.Drawing.Size(100, 20);
             this.timeTextBox.TabIndex = 10;
@@ -140,7 +145,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(305, 77);
+            this.label3.Location = new System.Drawing.Point(305, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 11;
@@ -165,10 +170,11 @@
             // sectionListBox
             // 
             this.sectionListBox.FormattingEnabled = true;
-            this.sectionListBox.Location = new System.Drawing.Point(484, 211);
+            this.sectionListBox.Location = new System.Drawing.Point(464, 211);
             this.sectionListBox.Name = "sectionListBox";
             this.sectionListBox.Size = new System.Drawing.Size(120, 95);
             this.sectionListBox.TabIndex = 14;
+            this.sectionListBox.SelectedIndexChanged += new System.EventHandler(this.sectionListBox_SelectedIndexChanged);
             // 
             // updateButton
             // 
@@ -190,11 +196,42 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
+            // courseListBox
+            // 
+            this.courseListBox.FormattingEnabled = true;
+            this.courseListBox.Location = new System.Drawing.Point(292, 211);
+            this.courseListBox.Name = "courseListBox";
+            this.courseListBox.Size = new System.Drawing.Size(120, 95);
+            this.courseListBox.TabIndex = 17;
+            this.courseListBox.SelectedIndexChanged += new System.EventHandler(this.courseListBox_SelectedIndexChanged);
+            // 
+            // facultyListBox
+            // 
+            this.facultyListBox.FormattingEnabled = true;
+            this.facultyListBox.Location = new System.Drawing.Point(501, 74);
+            this.facultyListBox.Name = "facultyListBox";
+            this.facultyListBox.Size = new System.Drawing.Size(120, 95);
+            this.facultyListBox.TabIndex = 18;
+            this.facultyListBox.SelectedIndexChanged += new System.EventHandler(this.facultyListBox_SelectedIndexChanged);
+            // 
+            // returnButton
+            // 
+            this.returnButton.Location = new System.Drawing.Point(615, 362);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(75, 23);
+            this.returnButton.TabIndex = 19;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
             // SectionsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.returnButton);
+            this.Controls.Add(this.facultyListBox);
+            this.Controls.Add(this.courseListBox);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.sectionListBox);
@@ -214,6 +251,7 @@
             this.Controls.Add(this.daysBox);
             this.Name = "SectionsMenu";
             this.Text = "SectionsMenu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SectionsMenu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +276,8 @@
         private System.Windows.Forms.ListBox sectionListBox;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.ListBox courseListBox;
+        private System.Windows.Forms.ListBox facultyListBox;
+        private System.Windows.Forms.Button returnButton;
     }
 }

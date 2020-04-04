@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gradeCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,43 +36,49 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
+            this.sectionListBox = new System.Windows.Forms.ListBox();
+            this.ATextBox = new System.Windows.Forms.MaskedTextBox();
+            this.AMinusTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.BPlusTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.BTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.BMinusTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.FTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.CMinusTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.CTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.CPlusTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // gradeCheckedListBox
-            // 
-            this.gradeCheckedListBox.FormattingEnabled = true;
-            this.gradeCheckedListBox.Items.AddRange(new object[] {
-            "A",
-            "A-",
-            "B+",
-            "C",
-            "C-",
-            "F"});
-            this.gradeCheckedListBox.Location = new System.Drawing.Point(146, 225);
-            this.gradeCheckedListBox.Name = "gradeCheckedListBox";
-            this.gradeCheckedListBox.Size = new System.Drawing.Size(120, 94);
-            this.gradeCheckedListBox.TabIndex = 0;
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(122, 31);
+            this.idTextBox.Location = new System.Drawing.Point(128, 60);
             this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 10;
             // 
             // ID
             // 
             this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(98, 34);
+            this.ID.Location = new System.Drawing.Point(71, 63);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(18, 13);
+            this.ID.Size = new System.Drawing.Size(50, 13);
             this.ID.TabIndex = 11;
-            this.ID.Text = "ID";
+            this.ID.Text = "Grade ID";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 92);
+            this.label1.Location = new System.Drawing.Point(65, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 12;
@@ -81,22 +86,24 @@
             // 
             // sectionIDTextBox
             // 
-            this.sectionIDTextBox.Location = new System.Drawing.Point(162, 92);
+            this.sectionIDTextBox.Location = new System.Drawing.Point(128, 95);
             this.sectionIDTextBox.Name = "sectionIDTextBox";
+            this.sectionIDTextBox.ReadOnly = true;
             this.sectionIDTextBox.Size = new System.Drawing.Size(100, 20);
             this.sectionIDTextBox.TabIndex = 13;
             // 
             // gradeListBox
             // 
             this.gradeListBox.FormattingEnabled = true;
-            this.gradeListBox.Location = new System.Drawing.Point(596, 253);
+            this.gradeListBox.Location = new System.Drawing.Point(48, 232);
             this.gradeListBox.Name = "gradeListBox";
-            this.gradeListBox.Size = new System.Drawing.Size(120, 95);
+            this.gradeListBox.Size = new System.Drawing.Size(180, 56);
             this.gradeListBox.TabIndex = 14;
+            this.gradeListBox.SelectedIndexChanged += new System.EventHandler(this.gradeListBox_SelectedIndexChanged);
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(122, 384);
+            this.AddButton.Location = new System.Drawing.Point(109, 308);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 15;
@@ -106,7 +113,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(203, 384);
+            this.DeleteButton.Location = new System.Drawing.Point(190, 308);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteButton.TabIndex = 16;
@@ -116,7 +123,7 @@
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(284, 384);
+            this.UpdateButton.Location = new System.Drawing.Point(271, 308);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(75, 23);
             this.UpdateButton.TabIndex = 17;
@@ -124,11 +131,194 @@
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
+            // sectionListBox
+            // 
+            this.sectionListBox.FormattingEnabled = true;
+            this.sectionListBox.Location = new System.Drawing.Point(48, 127);
+            this.sectionListBox.Name = "sectionListBox";
+            this.sectionListBox.Size = new System.Drawing.Size(180, 95);
+            this.sectionListBox.TabIndex = 18;
+            this.sectionListBox.SelectedIndexChanged += new System.EventHandler(this.sectionListBox_SelectedIndexChanged);
+            // 
+            // ATextBox
+            // 
+            this.ATextBox.Location = new System.Drawing.Point(298, 60);
+            this.ATextBox.Name = "ATextBox";
+            this.ATextBox.Size = new System.Drawing.Size(48, 20);
+            this.ATextBox.TabIndex = 19;
+            // 
+            // AMinusTextBox
+            // 
+            this.AMinusTextBox.Location = new System.Drawing.Point(298, 86);
+            this.AMinusTextBox.Name = "AMinusTextBox";
+            this.AMinusTextBox.Size = new System.Drawing.Size(48, 20);
+            this.AMinusTextBox.TabIndex = 20;
+            // 
+            // BPlusTextBox
+            // 
+            this.BPlusTextBox.Location = new System.Drawing.Point(298, 112);
+            this.BPlusTextBox.Name = "BPlusTextBox";
+            this.BPlusTextBox.Size = new System.Drawing.Size(48, 20);
+            this.BPlusTextBox.TabIndex = 21;
+            // 
+            // BTextBox
+            // 
+            this.BTextBox.Location = new System.Drawing.Point(298, 138);
+            this.BTextBox.Name = "BTextBox";
+            this.BTextBox.Size = new System.Drawing.Size(48, 20);
+            this.BTextBox.TabIndex = 22;
+            // 
+            // BMinusTextBox
+            // 
+            this.BMinusTextBox.Location = new System.Drawing.Point(298, 164);
+            this.BMinusTextBox.Name = "BMinusTextBox";
+            this.BMinusTextBox.Size = new System.Drawing.Size(48, 20);
+            this.BMinusTextBox.TabIndex = 23;
+            // 
+            // FTextBox
+            // 
+            this.FTextBox.Location = new System.Drawing.Point(298, 268);
+            this.FTextBox.Name = "FTextBox";
+            this.FTextBox.Size = new System.Drawing.Size(48, 20);
+            this.FTextBox.TabIndex = 27;
+            // 
+            // CMinusTextBox
+            // 
+            this.CMinusTextBox.Location = new System.Drawing.Point(298, 242);
+            this.CMinusTextBox.Name = "CMinusTextBox";
+            this.CMinusTextBox.Size = new System.Drawing.Size(48, 20);
+            this.CMinusTextBox.TabIndex = 26;
+            // 
+            // CTextBox
+            // 
+            this.CTextBox.Location = new System.Drawing.Point(298, 216);
+            this.CTextBox.Name = "CTextBox";
+            this.CTextBox.Size = new System.Drawing.Size(48, 20);
+            this.CTextBox.TabIndex = 25;
+            // 
+            // CPlusTextBox
+            // 
+            this.CPlusTextBox.Location = new System.Drawing.Point(298, 190);
+            this.CPlusTextBox.Name = "CPlusTextBox";
+            this.CPlusTextBox.Size = new System.Drawing.Size(48, 20);
+            this.CPlusTextBox.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(272, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "A";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(272, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 13);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "A-";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(272, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "B+";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(272, 193);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "C+";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(272, 167);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 13);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "B-";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(272, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "B";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(272, 219);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(14, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "C";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(272, 245);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 13);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "C-";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(272, 271);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(13, 13);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "F";
+            // 
+            // returnButton
+            // 
+            this.returnButton.Location = new System.Drawing.Point(546, 307);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(75, 23);
+            this.returnButton.TabIndex = 37;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
             // GradeMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.returnButton);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.FTextBox);
+            this.Controls.Add(this.CMinusTextBox);
+            this.Controls.Add(this.CTextBox);
+            this.Controls.Add(this.CPlusTextBox);
+            this.Controls.Add(this.BMinusTextBox);
+            this.Controls.Add(this.BTextBox);
+            this.Controls.Add(this.BPlusTextBox);
+            this.Controls.Add(this.AMinusTextBox);
+            this.Controls.Add(this.ATextBox);
+            this.Controls.Add(this.sectionListBox);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
@@ -137,18 +327,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.gradeCheckedListBox);
             this.Name = "GradeMenu";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GradeMenu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckedListBox gradeCheckedListBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.Label label1;
@@ -157,5 +344,25 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.ListBox sectionListBox;
+        private System.Windows.Forms.MaskedTextBox ATextBox;
+        private System.Windows.Forms.MaskedTextBox AMinusTextBox;
+        private System.Windows.Forms.MaskedTextBox BPlusTextBox;
+        private System.Windows.Forms.MaskedTextBox BTextBox;
+        private System.Windows.Forms.MaskedTextBox BMinusTextBox;
+        private System.Windows.Forms.MaskedTextBox FTextBox;
+        private System.Windows.Forms.MaskedTextBox CMinusTextBox;
+        private System.Windows.Forms.MaskedTextBox CTextBox;
+        private System.Windows.Forms.MaskedTextBox CPlusTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button returnButton;
     }
 }
