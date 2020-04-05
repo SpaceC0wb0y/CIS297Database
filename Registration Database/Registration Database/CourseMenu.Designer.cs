@@ -220,7 +220,6 @@
             this.Name = "CourseMenu";
             this.Text = "CourseMenu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CourseMenu_FormClosed);
-            this.Load += new System.EventHandler(this.CourseMenu_Load);
             this.Enter += new System.EventHandler(this.MainMenu_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
