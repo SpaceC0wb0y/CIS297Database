@@ -39,7 +39,7 @@
             // MajorListBox
             // 
             this.MajorListBox.FormattingEnabled = true;
-            this.MajorListBox.Location = new System.Drawing.Point(12, 12);
+            this.MajorListBox.Location = new System.Drawing.Point(393, 12);
             this.MajorListBox.Name = "MajorListBox";
             this.MajorListBox.Size = new System.Drawing.Size(328, 251);
             this.MajorListBox.TabIndex = 43;
@@ -47,7 +47,7 @@
             // 
             // ClearMajorFieldsButton
             // 
-            this.ClearMajorFieldsButton.Location = new System.Drawing.Point(590, 22);
+            this.ClearMajorFieldsButton.Location = new System.Drawing.Point(256, 99);
             this.ClearMajorFieldsButton.Name = "ClearMajorFieldsButton";
             this.ClearMajorFieldsButton.Size = new System.Drawing.Size(102, 30);
             this.ClearMajorFieldsButton.TabIndex = 42;
@@ -57,7 +57,7 @@
             // 
             // UpdateMajorButton
             // 
-            this.UpdateMajorButton.Location = new System.Drawing.Point(465, 215);
+            this.UpdateMajorButton.Location = new System.Drawing.Point(131, 215);
             this.UpdateMajorButton.Name = "UpdateMajorButton";
             this.UpdateMajorButton.Size = new System.Drawing.Size(109, 30);
             this.UpdateMajorButton.TabIndex = 41;
@@ -68,7 +68,7 @@
             // DeleteMajorButton
             // 
             this.DeleteMajorButton.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteMajorButton.Location = new System.Drawing.Point(589, 215);
+            this.DeleteMajorButton.Location = new System.Drawing.Point(255, 215);
             this.DeleteMajorButton.Name = "DeleteMajorButton";
             this.DeleteMajorButton.Size = new System.Drawing.Size(103, 30);
             this.DeleteMajorButton.TabIndex = 40;
@@ -79,7 +79,7 @@
             // AddMajorButton
             // 
             this.AddMajorButton.BackColor = System.Drawing.Color.Transparent;
-            this.AddMajorButton.Location = new System.Drawing.Point(361, 215);
+            this.AddMajorButton.Location = new System.Drawing.Point(27, 215);
             this.AddMajorButton.Name = "AddMajorButton";
             this.AddMajorButton.Size = new System.Drawing.Size(89, 30);
             this.AddMajorButton.TabIndex = 39;
@@ -89,14 +89,15 @@
             // 
             // majorNameTextBox
             // 
-            this.majorNameTextBox.Location = new System.Drawing.Point(432, 68);
+            this.majorNameTextBox.Location = new System.Drawing.Point(98, 68);
             this.majorNameTextBox.Name = "majorNameTextBox";
             this.majorNameTextBox.Size = new System.Drawing.Size(260, 20);
             this.majorNameTextBox.TabIndex = 37;
             // 
             // majorIDTextBox
             // 
-            this.majorIDTextBox.Location = new System.Drawing.Point(432, 28);
+            this.majorIDTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.majorIDTextBox.Location = new System.Drawing.Point(98, 28);
             this.majorIDTextBox.Name = "majorIDTextBox";
             this.majorIDTextBox.ReadOnly = true;
             this.majorIDTextBox.Size = new System.Drawing.Size(100, 20);
@@ -106,7 +107,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(358, 71);
+            this.label13.Location = new System.Drawing.Point(24, 71);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 13);
             this.label13.TabIndex = 33;
@@ -116,7 +117,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(358, 31);
+            this.label14.Location = new System.Drawing.Point(24, 31);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(50, 13);
             this.label14.TabIndex = 32;
@@ -125,7 +126,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(346, 12);
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -134,7 +135,7 @@
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(643, 270);
+            this.returnButton.Location = new System.Drawing.Point(309, 270);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(75, 23);
             this.returnButton.TabIndex = 45;

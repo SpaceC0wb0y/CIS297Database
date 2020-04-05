@@ -46,15 +46,16 @@
             // enrollmentsListBox
             // 
             this.enrollmentsListBox.FormattingEnabled = true;
-            this.enrollmentsListBox.Location = new System.Drawing.Point(71, 141);
+            this.enrollmentsListBox.Location = new System.Drawing.Point(622, 42);
             this.enrollmentsListBox.Name = "enrollmentsListBox";
-            this.enrollmentsListBox.Size = new System.Drawing.Size(120, 95);
+            this.enrollmentsListBox.Size = new System.Drawing.Size(154, 121);
             this.enrollmentsListBox.TabIndex = 0;
             this.enrollmentsListBox.SelectedIndexChanged += new System.EventHandler(this.enrollmentsListBox_SelectedIndexChanged);
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(91, 26);
+            this.idTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.idTextBox.Location = new System.Drawing.Point(91, 54);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
@@ -63,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 29);
+            this.label1.Location = new System.Drawing.Point(67, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 12;
@@ -71,7 +72,8 @@
             // 
             // sectionIDTextBox
             // 
-            this.sectionIDTextBox.Location = new System.Drawing.Point(91, 65);
+            this.sectionIDTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.sectionIDTextBox.Location = new System.Drawing.Point(91, 93);
             this.sectionIDTextBox.Name = "sectionIDTextBox";
             this.sectionIDTextBox.ReadOnly = true;
             this.sectionIDTextBox.Size = new System.Drawing.Size(100, 20);
@@ -80,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 72);
+            this.label2.Location = new System.Drawing.Point(28, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 15;
@@ -88,7 +90,8 @@
             // 
             // studentIDTextBox
             // 
-            this.studentIDTextBox.Location = new System.Drawing.Point(91, 101);
+            this.studentIDTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.studentIDTextBox.Location = new System.Drawing.Point(91, 129);
             this.studentIDTextBox.Name = "studentIDTextBox";
             this.studentIDTextBox.ReadOnly = true;
             this.studentIDTextBox.Size = new System.Drawing.Size(100, 20);
@@ -97,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 108);
+            this.label3.Location = new System.Drawing.Point(27, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 17;
@@ -105,7 +108,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(91, 328);
+            this.addButton.Location = new System.Drawing.Point(457, 190);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 18;
@@ -115,7 +118,7 @@
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(172, 328);
+            this.updateButton.Location = new System.Drawing.Point(538, 190);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(75, 23);
             this.updateButton.TabIndex = 19;
@@ -125,7 +128,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(253, 328);
+            this.deleteButton.Location = new System.Drawing.Point(619, 190);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 20;
@@ -136,24 +139,24 @@
             // studentListBox
             // 
             this.studentListBox.FormattingEnabled = true;
-            this.studentListBox.Location = new System.Drawing.Point(289, 141);
+            this.studentListBox.Location = new System.Drawing.Point(233, 42);
             this.studentListBox.Name = "studentListBox";
-            this.studentListBox.Size = new System.Drawing.Size(120, 95);
+            this.studentListBox.Size = new System.Drawing.Size(154, 121);
             this.studentListBox.TabIndex = 21;
             this.studentListBox.SelectedIndexChanged += new System.EventHandler(this.studentListBox_SelectedIndexChanged);
             // 
             // sectionListBox
             // 
             this.sectionListBox.FormattingEnabled = true;
-            this.sectionListBox.Location = new System.Drawing.Point(289, 26);
+            this.sectionListBox.Location = new System.Drawing.Point(427, 42);
             this.sectionListBox.Name = "sectionListBox";
-            this.sectionListBox.Size = new System.Drawing.Size(120, 95);
+            this.sectionListBox.Size = new System.Drawing.Size(154, 121);
             this.sectionListBox.TabIndex = 22;
             this.sectionListBox.SelectedIndexChanged += new System.EventHandler(this.sectionListBox_SelectedIndexChanged);
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(488, 328);
+            this.returnButton.Location = new System.Drawing.Point(700, 190);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(75, 23);
             this.returnButton.TabIndex = 23;
@@ -165,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(788, 256);
             this.Controls.Add(this.returnButton);
             this.Controls.Add(this.sectionListBox);
             this.Controls.Add(this.studentListBox);
@@ -180,7 +183,7 @@
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.enrollmentsListBox);
             this.Name = "EnrollmentsMenu";
-            this.Text = "Form1";
+            this.Text = "EnrollmentsMenu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EnrollmentsMenu_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

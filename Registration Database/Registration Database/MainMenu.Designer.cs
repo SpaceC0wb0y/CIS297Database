@@ -34,7 +34,7 @@
             // 
             // coursesButton
             // 
-            this.coursesButton.Location = new System.Drawing.Point(12, 12);
+            this.coursesButton.Location = new System.Drawing.Point(71, 32);
             this.coursesButton.Name = "coursesButton";
             this.coursesButton.Size = new System.Drawing.Size(117, 36);
             this.coursesButton.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // sectionsButton
             // 
-            this.sectionsButton.Location = new System.Drawing.Point(12, 54);
+            this.sectionsButton.Location = new System.Drawing.Point(71, 74);
             this.sectionsButton.Name = "sectionsButton";
             this.sectionsButton.Size = new System.Drawing.Size(117, 36);
             this.sectionsButton.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // facultyButton
             // 
-            this.facultyButton.Location = new System.Drawing.Point(12, 96);
+            this.facultyButton.Location = new System.Drawing.Point(71, 116);
             this.facultyButton.Name = "facultyButton";
             this.facultyButton.Size = new System.Drawing.Size(117, 36);
             this.facultyButton.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             // studentsButton
             // 
-            this.studentsButton.Location = new System.Drawing.Point(12, 138);
+            this.studentsButton.Location = new System.Drawing.Point(71, 158);
             this.studentsButton.Name = "studentsButton";
             this.studentsButton.Size = new System.Drawing.Size(117, 36);
             this.studentsButton.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             // majorsButton
             // 
-            this.majorsButton.Location = new System.Drawing.Point(12, 180);
+            this.majorsButton.Location = new System.Drawing.Point(71, 200);
             this.majorsButton.Name = "majorsButton";
             this.majorsButton.Size = new System.Drawing.Size(117, 36);
             this.majorsButton.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             // EnrollmentButton
             // 
-            this.EnrollmentButton.Location = new System.Drawing.Point(12, 222);
+            this.EnrollmentButton.Location = new System.Drawing.Point(71, 242);
             this.EnrollmentButton.Name = "EnrollmentButton";
             this.EnrollmentButton.Size = new System.Drawing.Size(117, 36);
             this.EnrollmentButton.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             // gradesButton
             // 
-            this.gradesButton.Location = new System.Drawing.Point(12, 264);
+            this.gradesButton.Location = new System.Drawing.Point(71, 284);
             this.gradesButton.Name = "gradesButton";
             this.gradesButton.Size = new System.Drawing.Size(117, 36);
             this.gradesButton.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(260, 362);
             this.Controls.Add(this.gradesButton);
             this.Controls.Add(this.EnrollmentButton);
             this.Controls.Add(this.majorsButton);

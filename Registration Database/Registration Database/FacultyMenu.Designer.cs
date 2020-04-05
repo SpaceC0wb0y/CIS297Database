@@ -43,7 +43,7 @@
             // FacultyListBox
             // 
             this.FacultyListBox.FormattingEnabled = true;
-            this.FacultyListBox.Location = new System.Drawing.Point(12, 12);
+            this.FacultyListBox.Location = new System.Drawing.Point(393, 12);
             this.FacultyListBox.Name = "FacultyListBox";
             this.FacultyListBox.Size = new System.Drawing.Size(328, 251);
             this.FacultyListBox.TabIndex = 53;
@@ -51,7 +51,7 @@
             // 
             // ClearFacultyFieldsButton
             // 
-            this.ClearFacultyFieldsButton.Location = new System.Drawing.Point(590, 22);
+            this.ClearFacultyFieldsButton.Location = new System.Drawing.Point(256, 22);
             this.ClearFacultyFieldsButton.Name = "ClearFacultyFieldsButton";
             this.ClearFacultyFieldsButton.Size = new System.Drawing.Size(102, 30);
             this.ClearFacultyFieldsButton.TabIndex = 52;
@@ -61,7 +61,7 @@
             // 
             // UpdateFacultyButton
             // 
-            this.UpdateFacultyButton.Location = new System.Drawing.Point(465, 215);
+            this.UpdateFacultyButton.Location = new System.Drawing.Point(131, 215);
             this.UpdateFacultyButton.Name = "UpdateFacultyButton";
             this.UpdateFacultyButton.Size = new System.Drawing.Size(109, 30);
             this.UpdateFacultyButton.TabIndex = 51;
@@ -72,7 +72,7 @@
             // DeleteFacultyButton
             // 
             this.DeleteFacultyButton.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteFacultyButton.Location = new System.Drawing.Point(589, 215);
+            this.DeleteFacultyButton.Location = new System.Drawing.Point(255, 215);
             this.DeleteFacultyButton.Name = "DeleteFacultyButton";
             this.DeleteFacultyButton.Size = new System.Drawing.Size(103, 30);
             this.DeleteFacultyButton.TabIndex = 50;
@@ -83,7 +83,7 @@
             // AddFacultyButton
             // 
             this.AddFacultyButton.BackColor = System.Drawing.Color.Transparent;
-            this.AddFacultyButton.Location = new System.Drawing.Point(361, 215);
+            this.AddFacultyButton.Location = new System.Drawing.Point(27, 215);
             this.AddFacultyButton.Name = "AddFacultyButton";
             this.AddFacultyButton.Size = new System.Drawing.Size(89, 30);
             this.AddFacultyButton.TabIndex = 49;
@@ -93,14 +93,16 @@
             // 
             // facultyNameTextBox
             // 
-            this.facultyNameTextBox.Location = new System.Drawing.Point(432, 68);
+            this.facultyNameTextBox.Location = new System.Drawing.Point(98, 68);
             this.facultyNameTextBox.Name = "facultyNameTextBox";
             this.facultyNameTextBox.Size = new System.Drawing.Size(260, 20);
             this.facultyNameTextBox.TabIndex = 48;
             // 
             // facultyIDTextBox
             // 
-            this.facultyIDTextBox.Location = new System.Drawing.Point(432, 28);
+            this.facultyIDTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.facultyIDTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.facultyIDTextBox.Location = new System.Drawing.Point(98, 28);
             this.facultyIDTextBox.Name = "facultyIDTextBox";
             this.facultyIDTextBox.ReadOnly = true;
             this.facultyIDTextBox.Size = new System.Drawing.Size(100, 20);
@@ -110,7 +112,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(358, 71);
+            this.label13.Location = new System.Drawing.Point(24, 71);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 13);
             this.label13.TabIndex = 46;
@@ -120,7 +122,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(358, 31);
+            this.label14.Location = new System.Drawing.Point(24, 31);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 13);
             this.label14.TabIndex = 45;
@@ -129,7 +131,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(346, 12);
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -138,7 +140,7 @@
             // 
             // facultyPhoneTextBox
             // 
-            this.facultyPhoneTextBox.Location = new System.Drawing.Point(432, 107);
+            this.facultyPhoneTextBox.Location = new System.Drawing.Point(98, 107);
             this.facultyPhoneTextBox.Name = "facultyPhoneTextBox";
             this.facultyPhoneTextBox.Size = new System.Drawing.Size(260, 20);
             this.facultyPhoneTextBox.TabIndex = 56;
@@ -147,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(358, 110);
+            this.label1.Location = new System.Drawing.Point(24, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 55;
@@ -155,7 +157,7 @@
             // 
             // facultyOfficeTextBox
             // 
-            this.facultyOfficeTextBox.Location = new System.Drawing.Point(432, 145);
+            this.facultyOfficeTextBox.Location = new System.Drawing.Point(98, 145);
             this.facultyOfficeTextBox.Name = "facultyOfficeTextBox";
             this.facultyOfficeTextBox.Size = new System.Drawing.Size(260, 20);
             this.facultyOfficeTextBox.TabIndex = 58;
@@ -164,7 +166,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(358, 148);
+            this.label2.Location = new System.Drawing.Point(24, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 57;
@@ -172,7 +174,7 @@
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(646, 267);
+            this.returnButton.Location = new System.Drawing.Point(312, 267);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(75, 23);
             this.returnButton.TabIndex = 59;

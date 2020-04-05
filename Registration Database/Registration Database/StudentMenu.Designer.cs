@@ -36,7 +36,7 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(36, 6);
+            this.idTextBox.Location = new System.Drawing.Point(69, 54);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 9;
@@ -44,7 +44,7 @@
             // IDLabel
             // 
             this.IDLabel.AutoSize = true;
-            this.IDLabel.Location = new System.Drawing.Point(12, 9);
+            this.IDLabel.Location = new System.Drawing.Point(32, 55);
             this.IDLabel.Name = "IDLabel";
             this.IDLabel.Size = new System.Drawing.Size(18, 13);
             this.IDLabel.TabIndex = 10;
@@ -53,14 +53,14 @@
             // studentListBox
             // 
             this.studentListBox.FormattingEnabled = true;
-            this.studentListBox.Location = new System.Drawing.Point(262, 12);
+            this.studentListBox.Location = new System.Drawing.Point(226, 21);
             this.studentListBox.Name = "studentListBox";
-            this.studentListBox.Size = new System.Drawing.Size(120, 95);
+            this.studentListBox.Size = new System.Drawing.Size(164, 134);
             this.studentListBox.TabIndex = 15;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(49, 42);
+            this.nameTextBox.Location = new System.Drawing.Point(69, 92);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 16;
@@ -68,7 +68,7 @@
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(8, 49);
+            this.NameLabel.Location = new System.Drawing.Point(28, 95);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(35, 13);
             this.NameLabel.TabIndex = 17;
@@ -76,7 +76,7 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(60, 293);
+            this.AddButton.Location = new System.Drawing.Point(72, 181);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 18;
@@ -86,7 +86,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(150, 293);
+            this.deleteButton.Location = new System.Drawing.Point(153, 181);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 19;
@@ -96,7 +96,7 @@
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(242, 293);
+            this.updateButton.Location = new System.Drawing.Point(234, 181);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(75, 23);
             this.updateButton.TabIndex = 20;
@@ -106,7 +106,7 @@
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(508, 208);
+            this.returnButton.Location = new System.Drawing.Point(315, 181);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(75, 23);
             this.returnButton.TabIndex = 21;
@@ -118,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(434, 234);
             this.Controls.Add(this.returnButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.deleteButton);

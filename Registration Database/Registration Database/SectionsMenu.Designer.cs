@@ -54,14 +54,14 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.daysBox.Location = new System.Drawing.Point(40, 245);
+            this.daysBox.Location = new System.Drawing.Point(51, 165);
             this.daysBox.Name = "daysBox";
             this.daysBox.Size = new System.Drawing.Size(120, 79);
             this.daysBox.TabIndex = 0;
             // 
             // numberTextBox
             // 
-            this.numberTextBox.Location = new System.Drawing.Point(70, 151);
+            this.numberTextBox.Location = new System.Drawing.Point(92, 117);
             this.numberTextBox.Name = "numberTextBox";
             this.numberTextBox.Size = new System.Drawing.Size(100, 20);
             this.numberTextBox.TabIndex = 1;
@@ -69,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 158);
+            this.label1.Location = new System.Drawing.Point(15, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 2;
@@ -78,15 +78,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 77);
+            this.label2.Location = new System.Drawing.Point(14, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "courseID";
+            this.label2.Text = "Course ID";
             // 
             // courseIDTextBox
             // 
-            this.courseIDTextBox.Location = new System.Drawing.Point(70, 70);
+            this.courseIDTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.courseIDTextBox.Location = new System.Drawing.Point(91, 54);
             this.courseIDTextBox.Name = "courseIDTextBox";
             this.courseIDTextBox.ReadOnly = true;
             this.courseIDTextBox.Size = new System.Drawing.Size(100, 20);
@@ -94,7 +95,7 @@
             // 
             // facultyIDTextBox
             // 
-            this.facultyIDTextBox.Location = new System.Drawing.Point(70, 114);
+            this.facultyIDTextBox.Location = new System.Drawing.Point(92, 84);
             this.facultyIDTextBox.Name = "facultyIDTextBox";
             this.facultyIDTextBox.Size = new System.Drawing.Size(100, 20);
             this.facultyIDTextBox.TabIndex = 5;
@@ -102,15 +103,15 @@
             // facultyID
             // 
             this.facultyID.AutoSize = true;
-            this.facultyID.Location = new System.Drawing.Point(15, 121);
+            this.facultyID.Location = new System.Drawing.Point(15, 87);
             this.facultyID.Name = "facultyID";
-            this.facultyID.Size = new System.Drawing.Size(49, 13);
+            this.facultyID.Size = new System.Drawing.Size(55, 13);
             this.facultyID.TabIndex = 6;
-            this.facultyID.Text = "facultyID";
+            this.facultyID.Text = "Faculty ID";
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(251, 364);
+            this.AddButton.Location = new System.Drawing.Point(453, 314);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 7;
@@ -120,7 +121,8 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(70, 21);
+            this.idTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.idTextBox.Location = new System.Drawing.Point(92, 21);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
@@ -129,7 +131,7 @@
             // ID
             // 
             this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(18, 27);
+            this.ID.Location = new System.Drawing.Point(14, 24);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(18, 13);
             this.ID.TabIndex = 9;
@@ -137,7 +139,7 @@
             // 
             // timeTextBox
             // 
-            this.timeTextBox.Location = new System.Drawing.Point(346, 74);
+            this.timeTextBox.Location = new System.Drawing.Point(92, 272);
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.Size = new System.Drawing.Size(100, 20);
             this.timeTextBox.TabIndex = 10;
@@ -145,7 +147,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(305, 75);
+            this.label3.Location = new System.Drawing.Point(14, 275);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 11;
@@ -153,7 +155,7 @@
             // 
             // semesterTextBox
             // 
-            this.semesterTextBox.Location = new System.Drawing.Point(346, 121);
+            this.semesterTextBox.Location = new System.Drawing.Point(92, 307);
             this.semesterTextBox.Name = "semesterTextBox";
             this.semesterTextBox.Size = new System.Drawing.Size(100, 20);
             this.semesterTextBox.TabIndex = 12;
@@ -161,7 +163,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(289, 124);
+            this.label4.Location = new System.Drawing.Point(14, 310);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 13;
@@ -170,15 +172,15 @@
             // sectionListBox
             // 
             this.sectionListBox.FormattingEnabled = true;
-            this.sectionListBox.Location = new System.Drawing.Point(464, 211);
+            this.sectionListBox.Location = new System.Drawing.Point(445, 61);
             this.sectionListBox.Name = "sectionListBox";
-            this.sectionListBox.Size = new System.Drawing.Size(120, 95);
+            this.sectionListBox.Size = new System.Drawing.Size(146, 199);
             this.sectionListBox.TabIndex = 14;
             this.sectionListBox.SelectedIndexChanged += new System.EventHandler(this.sectionListBox_SelectedIndexChanged);
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(356, 363);
+            this.updateButton.Location = new System.Drawing.Point(534, 314);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(75, 23);
             this.updateButton.TabIndex = 15;
@@ -188,7 +190,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(464, 362);
+            this.deleteButton.Location = new System.Drawing.Point(615, 313);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 16;
@@ -199,24 +201,24 @@
             // courseListBox
             // 
             this.courseListBox.FormattingEnabled = true;
-            this.courseListBox.Location = new System.Drawing.Point(292, 211);
+            this.courseListBox.Location = new System.Drawing.Point(270, 61);
             this.courseListBox.Name = "courseListBox";
-            this.courseListBox.Size = new System.Drawing.Size(120, 95);
+            this.courseListBox.Size = new System.Drawing.Size(146, 199);
             this.courseListBox.TabIndex = 17;
             this.courseListBox.SelectedIndexChanged += new System.EventHandler(this.courseListBox_SelectedIndexChanged);
             // 
             // facultyListBox
             // 
             this.facultyListBox.FormattingEnabled = true;
-            this.facultyListBox.Location = new System.Drawing.Point(501, 74);
+            this.facultyListBox.Location = new System.Drawing.Point(625, 61);
             this.facultyListBox.Name = "facultyListBox";
-            this.facultyListBox.Size = new System.Drawing.Size(120, 95);
+            this.facultyListBox.Size = new System.Drawing.Size(146, 199);
             this.facultyListBox.TabIndex = 18;
             this.facultyListBox.SelectedIndexChanged += new System.EventHandler(this.facultyListBox_SelectedIndexChanged);
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(615, 362);
+            this.returnButton.Location = new System.Drawing.Point(696, 314);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(75, 23);
             this.returnButton.TabIndex = 19;
@@ -228,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(798, 376);
             this.Controls.Add(this.returnButton);
             this.Controls.Add(this.facultyListBox);
             this.Controls.Add(this.courseListBox);

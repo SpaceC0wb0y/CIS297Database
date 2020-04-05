@@ -47,7 +47,7 @@
             // 
             // AddCourseButton
             // 
-            this.AddCourseButton.Location = new System.Drawing.Point(335, 180);
+            this.AddCourseButton.Location = new System.Drawing.Point(365, 244);
             this.AddCourseButton.Name = "AddCourseButton";
             this.AddCourseButton.Size = new System.Drawing.Size(75, 23);
             this.AddCourseButton.TabIndex = 1;
@@ -57,28 +57,28 @@
             // 
             // courseDepartmentTextBox
             // 
-            this.courseDepartmentTextBox.Location = new System.Drawing.Point(373, 52);
+            this.courseDepartmentTextBox.Location = new System.Drawing.Point(105, 85);
             this.courseDepartmentTextBox.Name = "courseDepartmentTextBox";
             this.courseDepartmentTextBox.Size = new System.Drawing.Size(100, 20);
             this.courseDepartmentTextBox.TabIndex = 2;
             // 
             // courseNumberTextBox
             // 
-            this.courseNumberTextBox.Location = new System.Drawing.Point(373, 78);
+            this.courseNumberTextBox.Location = new System.Drawing.Point(105, 111);
             this.courseNumberTextBox.Name = "courseNumberTextBox";
             this.courseNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.courseNumberTextBox.TabIndex = 3;
             // 
             // courseNameTextBox
             // 
-            this.courseNameTextBox.Location = new System.Drawing.Point(373, 104);
+            this.courseNameTextBox.Location = new System.Drawing.Point(105, 137);
             this.courseNameTextBox.Name = "courseNameTextBox";
             this.courseNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.courseNameTextBox.TabIndex = 4;
             // 
             // courseCreditsTextBox
             // 
-            this.courseCreditsTextBox.Location = new System.Drawing.Point(373, 130);
+            this.courseCreditsTextBox.Location = new System.Drawing.Point(105, 163);
             this.courseCreditsTextBox.Name = "courseCreditsTextBox";
             this.courseCreditsTextBox.Size = new System.Drawing.Size(100, 20);
             this.courseCreditsTextBox.TabIndex = 5;
@@ -86,7 +86,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(300, 55);
+            this.label1.Location = new System.Drawing.Point(32, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 6;
@@ -95,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(300, 81);
+            this.label2.Location = new System.Drawing.Point(32, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 7;
@@ -104,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(300, 107);
+            this.label3.Location = new System.Drawing.Point(32, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
@@ -113,7 +113,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(300, 133);
+            this.label4.Location = new System.Drawing.Point(32, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 9;
@@ -122,7 +122,7 @@
             // CourseListBox
             // 
             this.CourseListBox.FormattingEnabled = true;
-            this.CourseListBox.Location = new System.Drawing.Point(22, 27);
+            this.CourseListBox.Location = new System.Drawing.Point(394, 29);
             this.CourseListBox.Name = "CourseListBox";
             this.CourseListBox.Size = new System.Drawing.Size(249, 199);
             this.CourseListBox.TabIndex = 10;
@@ -131,7 +131,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 11);
+            this.label5.Location = new System.Drawing.Point(391, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 12;
@@ -139,7 +139,7 @@
             // 
             // UpdateCourseButton
             // 
-            this.UpdateCourseButton.Location = new System.Drawing.Point(416, 180);
+            this.UpdateCourseButton.Location = new System.Drawing.Point(446, 244);
             this.UpdateCourseButton.Name = "UpdateCourseButton";
             this.UpdateCourseButton.Size = new System.Drawing.Size(75, 23);
             this.UpdateCourseButton.TabIndex = 14;
@@ -149,7 +149,7 @@
             // 
             // DeleteCourseButton
             // 
-            this.DeleteCourseButton.Location = new System.Drawing.Point(497, 180);
+            this.DeleteCourseButton.Location = new System.Drawing.Point(527, 244);
             this.DeleteCourseButton.Name = "DeleteCourseButton";
             this.DeleteCourseButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteCourseButton.TabIndex = 15;
@@ -160,7 +160,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(300, 27);
+            this.label6.Location = new System.Drawing.Point(32, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 13);
             this.label6.TabIndex = 16;
@@ -168,7 +168,8 @@
             // 
             // courseIdTextBox
             // 
-            this.courseIdTextBox.Location = new System.Drawing.Point(373, 27);
+            this.courseIdTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.courseIdTextBox.Location = new System.Drawing.Point(105, 60);
             this.courseIdTextBox.Name = "courseIdTextBox";
             this.courseIdTextBox.ReadOnly = true;
             this.courseIdTextBox.Size = new System.Drawing.Size(100, 20);
@@ -176,7 +177,7 @@
             // 
             // ClearCourseFieldsButton
             // 
-            this.ClearCourseFieldsButton.Location = new System.Drawing.Point(497, 25);
+            this.ClearCourseFieldsButton.Location = new System.Drawing.Point(163, 189);
             this.ClearCourseFieldsButton.Name = "ClearCourseFieldsButton";
             this.ClearCourseFieldsButton.Size = new System.Drawing.Size(75, 23);
             this.ClearCourseFieldsButton.TabIndex = 18;
@@ -186,7 +187,7 @@
             // 
             // returnButton
             // 
-            this.returnButton.Location = new System.Drawing.Point(679, 203);
+            this.returnButton.Location = new System.Drawing.Point(608, 244);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(75, 23);
             this.returnButton.TabIndex = 19;
@@ -198,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(762, 318);
             this.Controls.Add(this.returnButton);
             this.Controls.Add(this.ClearCourseFieldsButton);
             this.Controls.Add(this.courseIdTextBox);
@@ -217,7 +218,9 @@
             this.Controls.Add(this.courseDepartmentTextBox);
             this.Controls.Add(this.AddCourseButton);
             this.Name = "CourseMenu";
+            this.Text = "CourseMenu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CourseMenu_FormClosed);
+            this.Load += new System.EventHandler(this.CourseMenu_Load);
             this.Enter += new System.EventHandler(this.MainMenu_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
