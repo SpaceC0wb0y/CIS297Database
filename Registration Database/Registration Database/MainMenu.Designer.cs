@@ -30,6 +30,7 @@
             this.majorsButton = new System.Windows.Forms.Button();
             this.EnrollmentButton = new System.Windows.Forms.Button();
             this.gradesButton = new System.Windows.Forms.Button();
+            this.majorDeclarationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // coursesButton
@@ -102,11 +103,22 @@
             this.gradesButton.UseVisualStyleBackColor = true;
             this.gradesButton.Click += new System.EventHandler(this.GradesButton_Click);
             // 
+            // majorDeclarationButton
+            // 
+            this.majorDeclarationButton.Location = new System.Drawing.Point(71, 326);
+            this.majorDeclarationButton.Name = "majorDeclarationButton";
+            this.majorDeclarationButton.Size = new System.Drawing.Size(117, 36);
+            this.majorDeclarationButton.TabIndex = 7;
+            this.majorDeclarationButton.Text = "Major Declaration";
+            this.majorDeclarationButton.UseVisualStyleBackColor = true;
+            this.majorDeclarationButton.Click += new System.EventHandler(this.majorDeclarationButton_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 362);
+            this.ClientSize = new System.Drawing.Size(260, 404);
+            this.Controls.Add(this.majorDeclarationButton);
             this.Controls.Add(this.gradesButton);
             this.Controls.Add(this.EnrollmentButton);
             this.Controls.Add(this.majorsButton);
@@ -130,5 +142,6 @@
         private System.Windows.Forms.Button majorsButton;
         private System.Windows.Forms.Button EnrollmentButton;
         private System.Windows.Forms.Button gradesButton;
+        private System.Windows.Forms.Button majorDeclarationButton;
     }
 }

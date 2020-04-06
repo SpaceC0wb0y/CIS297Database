@@ -80,6 +80,15 @@ namespace Registration_Database {
             gradeMenu.Show();
         }
 
+        private void majorDeclarationButton_Click(object sender, EventArgs e) {
+
+            this.Hide();
+
+            Student_MajorMenu studentMajorMenu = new Student_MajorMenu();
+
+            studentMajorMenu.Show();
+        }
+
         private void MainMenu_FormClosed(object sender, FormClosedEventArgs e) {
 
             if (System.Windows.Forms.Application.MessageLoop) {
