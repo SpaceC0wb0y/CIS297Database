@@ -41,7 +41,7 @@ namespace Registration_Database {
 
         private void AddStudent()
         {
-            if (!String.IsNullOrEmpty(idTextBox.Text) && !String.IsNullOrEmpty(nameTextBox.Text))
+            if (!String.IsNullOrEmpty(nameTextBox.Text))
             {
 
                 Student newStudent = new Student

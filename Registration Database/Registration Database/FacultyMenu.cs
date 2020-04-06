@@ -53,7 +53,9 @@ namespace Registration_Database {
 
         private void AddFaculty() {
 
-            if (!String.IsNullOrEmpty(facultyIDTextBox.Text)) {
+            if (!String.IsNullOrEmpty(facultyNameTextBox.Text) 
+                && !String.IsNullOrEmpty(facultyPhoneTextBox.Text) 
+                && !String.IsNullOrEmpty(facultyOfficeTextBox.Text)) {
 
                 Faculty newFaculty = new Faculty {
 
