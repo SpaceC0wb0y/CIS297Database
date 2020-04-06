@@ -137,15 +137,14 @@ namespace Registration_Database {
         private void returnButton_Click(object sender, EventArgs e) {
 
             this.Close();
-
-            MainMenu mainMenu = new MainMenu();
-
-            mainMenu.Show();
         }
 
         private void FacultyMenu_FormClosed(object sender, FormClosedEventArgs e) {
 
-            this.Close();
+            Return();
+        }
+
+        private void Return() {
 
             MainMenu mainMenu = new MainMenu();
 

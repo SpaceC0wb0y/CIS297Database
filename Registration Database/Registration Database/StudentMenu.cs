@@ -10,9 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Registration_Database {
+
     public partial class StudentMenu : Form {
+
         RegistrationDatabaseProjectEntities RegistrationDatabase;
+
         public StudentMenu() {
+
             InitializeComponent();
 
             RegistrationDatabase = new RegistrationDatabaseProjectEntities();
@@ -23,8 +27,16 @@ namespace Registration_Database {
         private void BindStudentList()
         {
 
-            studentListBox.DataSource = RegistrationDatabase.Students.ToList();
+            try { 
+                    studentListBox.DataSource = RegistrationDatabase.Students.ToList();
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show(ex.Message);
+            }
+            
             studentListBox.DisplayMember = "Name";
+            studentListBox.ValueMember = "Id";
         }
 
         private void AddStudent()
@@ -53,8 +65,6 @@ namespace Registration_Database {
                 }
 
                 BindStudentList();
-
-
             }
 
 
@@ -106,15 +116,7 @@ namespace Registration_Database {
                 }
 
                 BindStudentList();
-
             }
-
-
-        }
-
-        private void StudentMenu_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -135,6 +137,9 @@ namespace Registration_Database {
         private void returnButton_Click(object sender, EventArgs e) {
 
             this.Close();
+        }
+
+        private void Return() {
 
             MainMenu mainMenu = new MainMenu();
 
@@ -143,11 +148,7 @@ namespace Registration_Database {
 
         private void StudentMenu_FormClosed(object sender, FormClosedEventArgs e) {
 
-            this.Close();
-
-            MainMenu mainMenu = new MainMenu();
-
-            mainMenu.Show();
+            Return();
         }
     }
 }

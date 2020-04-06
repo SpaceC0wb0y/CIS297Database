@@ -40,7 +40,7 @@ namespace Registration_Database {
 
         private void AddGrade() {
 
-            if (!String.IsNullOrEmpty(idTextBox.Text) && !String.IsNullOrEmpty(sectionIDTextBox.Text)) {
+            if (!String.IsNullOrEmpty(sectionIDTextBox.Text)) {
 
                 Grade newGrade = new Grade {
 
@@ -62,9 +62,9 @@ namespace Registration_Database {
 
                     RegistrationDatabase.SaveChanges();
                 }
-                catch (DbUpdateException ex) {
+                catch (Exception ex) {
 
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.ToString());
                 }
 
                 BindGradeList(Convert.ToInt32(sectionIDTextBox.Text));
@@ -148,7 +148,7 @@ namespace Registration_Database {
 
             Section selectedSection = sectionListBox.SelectedItem as Section;
 
-            sectionIDTextBox.Text = selectedSection.Number.ToString();
+            sectionIDTextBox.Text = selectedSection.Id.ToString();
 
             BindGradeList(selectedSection.Id);
         }
@@ -173,15 +173,14 @@ namespace Registration_Database {
         private void returnButton_Click(object sender, EventArgs e) {
 
             this.Close();
-
-            MainMenu mainMenu = new MainMenu();
-
-            mainMenu.Show();
         }
 
         private void GradeMenu_FormClosed(object sender, FormClosedEventArgs e) {
 
-            this.Close();
+            Return();
+        }
+
+        private static void Return() {
 
             MainMenu mainMenu = new MainMenu();
 

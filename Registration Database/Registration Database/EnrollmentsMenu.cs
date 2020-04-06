@@ -25,40 +25,53 @@ namespace Registration_Database
             BindSectionList();
         }
 
-        private void BindEnrollmentsList()
+        private void BindEnrollmentsList(string enrollmentStudentFilter = "")
         {
-            enrollmentsListBox.DataSource = RegistrationDatabase.Enrollments.ToList();
+
+            try {
+
+                if (String.IsNullOrWhiteSpace(enrollmentStudentFilter)) {
+
+                    enrollmentsListBox.DataSource = RegistrationDatabase.Enrollments.ToList();
+                }
+                else {
+                    enrollmentsListBox.DataSource = RegistrationDatabase.Enrollments.Where(s => s.Student.Name.StartsWith(enrollmentStudentFilter)).ToList();
+                }
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show(ex.Message);
+            }
+
             enrollmentsListBox.DisplayMember = "Id";
             enrollmentsListBox.ValueMember = "Id";
         }
 
         private void BindStudentList() {
 
-            enrollmentsListBox.DataSource = RegistrationDatabase.Students.ToList();
-            enrollmentsListBox.DisplayMember = "Name";
-            enrollmentsListBox.ValueMember = "Id";
+            studentListBox.DataSource = RegistrationDatabase.Students.ToList();
+            studentListBox.DisplayMember = "Name";
+            studentListBox.ValueMember = "Id";
         }
 
         private void BindSectionList() {
 
-            enrollmentsListBox.DataSource = RegistrationDatabase.Sections.ToList();
-            enrollmentsListBox.DisplayMember = "Id";
-            enrollmentsListBox.ValueMember = "Id";
+            sectionListBox.DataSource = RegistrationDatabase.Sections.ToList();
+            sectionListBox.DisplayMember = "Id";
+            sectionListBox.ValueMember = "Id";
         }
 
         private void AddEnrollment()
         {
-            if (!String.IsNullOrEmpty(idTextBox.Text) && !String.IsNullOrEmpty(sectionIDTextBox.Text) && !String.IsNullOrEmpty(studentIDTextBox.Text))
+            if (!String.IsNullOrEmpty(sectionIDTextBox.Text) && !String.IsNullOrEmpty(studentIDTextBox.Text))
             {
 
                 Enrollment newEnrollment = new Enrollment
                 {
-                    Id = Convert.ToInt32(idTextBox.Text),
                     Section_Id = Convert.ToInt32(sectionIDTextBox.Text),
                     Student_Id = Convert.ToInt32(studentIDTextBox.Text)
 
                 };
-
 
                 RegistrationDatabase.Enrollments.Add(newEnrollment);
 
@@ -74,10 +87,7 @@ namespace Registration_Database
                 }
 
                 BindEnrollmentsList();
-
             }
-
-
         }
 
         private void UpdateEnrollment()
@@ -169,19 +179,23 @@ namespace Registration_Database
         private void returnButton_Click(object sender, EventArgs e) {
 
             this.Close();
+        }
 
+        private void EnrollmentsMenu_FormClosed(object sender, FormClosedEventArgs e) {
+
+            Return();
+        }
+
+        private void Return() {
+            
             MainMenu mainMenu = new MainMenu();
 
             mainMenu.Show();
         }
 
-        private void EnrollmentsMenu_FormClosed(object sender, FormClosedEventArgs e) {
+        private void EnrollmentStudentFilterTextBox_TextChanged(object sender, EventArgs e) {
 
-            this.Close();
-
-            MainMenu mainMenu = new MainMenu();
-
-            mainMenu.Show();
+            BindEnrollmentsList(enrollmentStudentFilterTextBox.Text);
         }
     }
 }

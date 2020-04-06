@@ -42,6 +42,8 @@
             this.courseIdTextBox = new System.Windows.Forms.TextBox();
             this.ClearCourseFieldsButton = new System.Windows.Forms.Button();
             this.returnButton = new System.Windows.Forms.Button();
+            this.courseDepartmentFilterTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,11 +197,30 @@
             this.returnButton.UseVisualStyleBackColor = true;
             this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
             // 
+            // courseDepartmentFilterTextBox
+            // 
+            this.courseDepartmentFilterTextBox.Location = new System.Drawing.Point(35, 247);
+            this.courseDepartmentFilterTextBox.Name = "courseDepartmentFilterTextBox";
+            this.courseDepartmentFilterTextBox.Size = new System.Drawing.Size(170, 20);
+            this.courseDepartmentFilterTextBox.TabIndex = 20;
+            this.courseDepartmentFilterTextBox.TextChanged += new System.EventHandler(this.CourseDepartmentFilterTextBox_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(32, 231);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Filter By Department";
+            // 
             // CourseMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 318);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.courseDepartmentFilterTextBox);
             this.Controls.Add(this.returnButton);
             this.Controls.Add(this.ClearCourseFieldsButton);
             this.Controls.Add(this.courseIdTextBox);
@@ -246,6 +267,8 @@
         private System.Windows.Forms.TextBox courseIdTextBox;
         private System.Windows.Forms.Button ClearCourseFieldsButton;
         private System.Windows.Forms.Button returnButton;
+        private System.Windows.Forms.TextBox courseDepartmentFilterTextBox;
+        private System.Windows.Forms.Label label7;
     }
 }
 

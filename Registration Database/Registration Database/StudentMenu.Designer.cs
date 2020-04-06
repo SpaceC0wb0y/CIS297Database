@@ -131,7 +131,6 @@
             this.Name = "StudentMenu";
             this.Text = "StudentMenu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentMenu_FormClosed);
-            this.Load += new System.EventHandler(this.StudentMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

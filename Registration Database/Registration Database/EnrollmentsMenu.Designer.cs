@@ -41,6 +41,11 @@
             this.studentListBox = new System.Windows.Forms.ListBox();
             this.sectionListBox = new System.Windows.Forms.ListBox();
             this.returnButton = new System.Windows.Forms.Button();
+            this.enrollmentStudentFilterTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // enrollmentsListBox
@@ -164,11 +169,60 @@
             this.returnButton.UseVisualStyleBackColor = true;
             this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
             // 
+            // enrollmentStudentFilterTextBox
+            // 
+            this.enrollmentStudentFilterTextBox.Location = new System.Drawing.Point(34, 202);
+            this.enrollmentStudentFilterTextBox.Name = "enrollmentStudentFilterTextBox";
+            this.enrollmentStudentFilterTextBox.Size = new System.Drawing.Size(157, 20);
+            this.enrollmentStudentFilterTextBox.TabIndex = 24;
+            this.enrollmentStudentFilterTextBox.TextChanged += new System.EventHandler(this.EnrollmentStudentFilterTextBox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(31, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Filter By Student";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(233, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Student List";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(424, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Section List";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(619, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Enrollment List";
+            // 
             // EnrollmentsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 256);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.enrollmentStudentFilterTextBox);
             this.Controls.Add(this.returnButton);
             this.Controls.Add(this.sectionListBox);
             this.Controls.Add(this.studentListBox);
@@ -205,5 +259,10 @@
         private System.Windows.Forms.ListBox studentListBox;
         private System.Windows.Forms.ListBox sectionListBox;
         private System.Windows.Forms.Button returnButton;
+        private System.Windows.Forms.TextBox enrollmentStudentFilterTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

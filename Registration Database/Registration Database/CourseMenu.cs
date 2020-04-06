@@ -29,11 +29,19 @@ namespace Registration_Database {
             BindCourseList();
         }
 
-        private void BindCourseList() {
+        private void BindCourseList(string courseDepartmentFilter = "") {
 
             try {
 
-                CourseListBox.DataSource = RegistrationDatabase.Courses.ToList();
+                if (String.IsNullOrWhiteSpace(courseDepartmentFilter)) {
+
+                    CourseListBox.DataSource = RegistrationDatabase.Courses.ToList();
+                }
+                else {
+
+                    CourseListBox.DataSource = RegistrationDatabase.Courses.Where(s => s.Department.StartsWith(courseDepartmentFilter)).ToList();
+                }
+                
             }
             catch (Exception ex) {
 
@@ -161,6 +169,11 @@ namespace Registration_Database {
         private void returnButton_Click(object sender, EventArgs e) {
 
             this.Close();
+        }
+
+        private void Return() {
+
+            this.Close();
 
             MainMenu mainMenu = new MainMenu();
 
@@ -169,11 +182,12 @@ namespace Registration_Database {
 
         private void CourseMenu_FormClosed(object sender, FormClosedEventArgs e) {
 
-            this.Close();
+            Return();
+        }
 
-            MainMenu mainMenu = new MainMenu();
+        private void CourseDepartmentFilterTextBox_TextChanged(object sender, EventArgs e) {
 
-            mainMenu.Show();
+            BindCourseList(courseDepartmentFilterTextBox.Text);
         }
     }
 }

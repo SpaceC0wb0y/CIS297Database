@@ -53,7 +53,7 @@ namespace Registration_Database {
 
         private void AddMajor() {
 
-            if (!String.IsNullOrEmpty(majorIDTextBox.Text)) {
+            if (!String.IsNullOrEmpty(majorNameTextBox.Text)) {
 
                 Major newMajor = new Major {
 
@@ -128,15 +128,14 @@ namespace Registration_Database {
         private void returnButton_Click(object sender, EventArgs e) {
 
             this.Close();
-
-            MainMenu mainMenu = new MainMenu();
-
-            mainMenu.Show();
         }
 
         private void MajorMenu_FormClosed(object sender, FormClosedEventArgs e) {
 
-            this.Close();
+            Return();
+        }
+
+        private static void Return() {
 
             MainMenu mainMenu = new MainMenu();
 

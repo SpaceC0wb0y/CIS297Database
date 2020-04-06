@@ -26,11 +26,26 @@ namespace Registration_Database {
             BindFacultyList();
         }
 
-        private void BindSectionList()
+        private void BindSectionList(string sectionSemesterFilter = "")
         {
 
-            sectionListBox.DataSource = RegistrationDatabase.Sections.ToList();
-            sectionListBox.DisplayMember = "Number Course_Id";
+            try {
+
+                if (String.IsNullOrWhiteSpace(sectionSemesterFilter)) {
+
+                    sectionListBox.DataSource = RegistrationDatabase.Sections.ToList();
+                }
+                else {
+
+                    sectionListBox.DataSource = RegistrationDatabase.Sections.Where(s => s.Semester.StartsWith(sectionSemesterFilter)).ToList();
+                }
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            sectionListBox.DisplayMember = "Number";
             sectionListBox.ValueMember = "Id";
         }
 
@@ -194,6 +209,9 @@ namespace Registration_Database {
             facultyIDTextBox.Text = selectedSection.Faculty_Id.ToString();
             numberTextBox.Text = selectedSection.Number.ToString();
 
+            semesterTextBox.Text = selectedSection.Semester;
+            timeTextBox.Text = selectedSection.Time;
+
             daysBox.SetItemChecked(0, selectedSection.Monday);
             daysBox.SetItemChecked(1, selectedSection.Tuesday);
             daysBox.SetItemChecked(2, selectedSection.Wednesday);
@@ -209,8 +227,11 @@ namespace Registration_Database {
         }
 
         private void returnButton_Click(object sender, EventArgs e) {
-
+            
             this.Close();
+        }
+
+        private void Return() {
 
             MainMenu mainMenu = new MainMenu();
 
@@ -219,11 +240,12 @@ namespace Registration_Database {
 
         private void SectionsMenu_FormClosed(object sender, FormClosedEventArgs e) {
 
-            this.Close();
+            Return();
+        }
 
-            MainMenu mainMenu = new MainMenu();
+        private void sectionSemesterFilterTextBox_TextChanged(object sender, EventArgs e) {
 
-            mainMenu.Show();
+            BindSectionList(sectionSemesterFilterTextBox.Text);
         }
     }
 }
